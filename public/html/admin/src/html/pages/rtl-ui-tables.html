@@ -1,0 +1,22 @@
+---
+title: Hero
+slug: ui-tables
+category: tables
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'UI Tables'
+---
+{% extends "./layouts/rtl-default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-bootstrap-datatables.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/vendor-bootstrap-datatables.rtl.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+<script src="assets/vendor/jquery.dataTables.js"></script>
+<script src="assets/vendor/dataTables.bootstrap4.js"></script>
+
+<script>
+  $('#data-table').dataTable();
+</script>
+{% endblock %}

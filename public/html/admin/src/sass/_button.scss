@@ -1,0 +1,9 @@
+.btn.btn-white {
+  background-color: #ffffff;
+  color: theme-color('text-color');
+  border: 1px solid theme-color('border-color');
+}
+
+.btn.btn-rounded {
+  border-radius: 50%;
+}

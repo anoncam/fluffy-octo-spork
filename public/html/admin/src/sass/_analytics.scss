@@ -1,0 +1,15 @@
+@include media-breakpoint-down(sm) {
+  .row {
+    .col-lg-6.device {
+      &:first-of-type {
+        margin-bottom: $spacer;
+        padding-bottom: $spacer;
+        border-right: 0 !important;
+        border-bottom: 1px solid theme-color('border-color');
+      }
+    }
+    .col-lg-6.visits-chart {
+      margin-bottom: $spacer;
+    }
+  }
+}

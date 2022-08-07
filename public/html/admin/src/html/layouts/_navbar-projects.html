@@ -1,0 +1,59 @@
+{% set prefix_theme = theme + '-' if theme %}
+<nav class="navbar navbar-expand-md {{ navbarClass if navbarClass else 'navbar-dark' }} d-flex  flex-column aling-items-center mb-3">
+ <button class="btn btn-link text-white pl-0 d-md-none" type="button" data-toggle="sidebar">
+    <i class="material-icons align-middle md-36">short_text</i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarProjects">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown nav-dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu dropdown-menu-account">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="dropdown-item">
+                <span class="align-middle">Flow Rails App</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-item">
+                <span class="align-middle">Hero Project Management</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item dropdown nav-dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          Milestones
+        </a>
+        <div class="dropdown-menu dropdown-menu-account">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="dropdown-item">
+                <span class="align-middle">Current Tasks</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-item">
+                <span class="align-middle">2.0.0</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-item">
+                <span class="align-middle">Ideas</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-expanded="false">
+          Get Help
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

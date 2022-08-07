@@ -1,0 +1,84 @@
+<div class="jumbotron fixed-banner">
+  <div class="fixed-banner-image-wrapper">
+    <img src="assets/images/fixed-banner.jpg" alt="property">
+  </div>
+  <div class="container">
+    <div class="text-center">
+      <div class="pb-3">
+        <h1 class="display-3 mb-0">Find a Property</h1>
+        <p class="lead">With Hero Properties you can quickly find your home!</p>
+      </div>
+
+       <div class="input-group input-group--inline w-100">
+        <div class="input-group-addon">
+          <i class="material-icons align-middle">search</i>
+        </div>
+        <input type="text" class="form-control" name="search" placeholder="Little Italy, Manhattan">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container container--wide">
+  <div class="row real-estate-header">
+    <div class="col-md-8">
+      <div class="d-flex">
+        <span>Sort by:</span>
+        <select class="custom-select">
+          <option selected>Price</option>
+          <option value="1">Most sold</option>
+          <option value="2">Most recent</option>
+          <option value="3">Reviews</option>
+        </select>
+
+        <small class="text-muted">250 Results</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="d-flex align-items-center justify-content-md-end">
+        <div class="btn-group btn-group-toggle btn-group-sm">
+          <a href="real-estate-list.html" class="btn btn-white text-muted">
+            <i class="material-icons md-18 align-middle">list</i>
+          </a>
+          <a href="#" class="btn btn-primary">
+            <i class="material-icons md-18 align-middle">view_column</i>
+          </a>
+          <a href="#" class="btn btn-white text-muted">
+            <i class="material-icons md-18 align-middle">location_on</i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    {% for property in properties %}
+      <div class="col-md-4 col-lg-4">
+        <div class="card card-property">
+          <a href="property.html">
+            <img src="{{ property.image }}" class="card-img" alt="property">
+          </a>
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <a href="property.html" class="h4 text-primary-dark mb-0">{{ property.title }}</a>
+              <div class="lead text-primary mb-0">&dollar;{{ property.price }}</div>
+            </div>
+            <ul class="list-unstyled m-0">
+              <li class="d-flex mb-1">
+                 <i class="material-icons md-18 align-middle mr-2 text-muted">location_on</i>
+                <span>{{ property.address }}</span>
+              </li>
+              <li class="d-flex mb-1">
+                  <i class="material-icons md-18 align-middle mr-2 text-muted">schedule</i>
+                  <span>added {{ property.date }}</span>
+              </li>
+              <li class="d-flex">
+                  <i class="material-icons md-18 align-middle mr-2 text-muted">home</i>
+                  <span>{{ property.company }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

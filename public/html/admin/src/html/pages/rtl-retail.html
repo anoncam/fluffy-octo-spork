@@ -1,0 +1,165 @@
+---
+title: Hero
+slug: retail
+category: retail
+navbarClass: bg-primary navbar-dark
+pageTitle: 'Retail'
+---
+{% extends "layouts/rtl-default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-bootstrap-datepicker.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/vendor-bootstrap-datepicker.rtl.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/vendor-morris.rtl.css" rel="stylesheet">
+{% endblock %}
+
+{%
+  set products = [
+    {
+      name: 'iPhone 8 Plus',
+      revenue: '2997.00',
+      sold: 3,
+      discount: '99.99'
+    },
+    {
+      name: 'MacBook Pro',
+      revenue: '2400.00',
+      sold: 1,
+      discount: '299.99'
+    },
+    {
+      name: 'iPhone 6s Plus',
+      revenue: '1400.00',
+      sold: 2,
+      discount: '49.99'
+    },
+    {
+      name: 'MacBook Air',
+      revenue: '1200.00',
+      sold: 1,
+      discount: '199.99'
+    },
+    {
+      name: 'iPhone 7',
+      revenue: '850.00',
+      sold: 1,
+      discount: '49.99'
+    },
+    {
+      name: 'MacBook Pro',
+      revenue: '2400.00',
+      sold: 1,
+      discount: '299.99'
+    },
+    {
+      name: 'iPhone 6s Plus',
+      revenue: '1400.00',
+      sold: 2,
+      discount: '49.99'
+    },
+    {
+      name: 'MacBook Air',
+      revenue: '1200.00',
+      sold: 1,
+      discount: '199.99'
+    }
+  ]
+%}
+
+{%
+  set employees = [
+    {
+      name: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      email: 'karen_smith@email.com',
+      active: 'now',
+      active_color: 'success',
+      revenue: '845.00',
+      transactions: 29,
+      items_sold: 34,
+      sales_value: '255.00'
+    },
+    {
+      name: 'Steven Short',
+      image: 'assets/images/avatars/person-5.jpg',
+      email: 'steven_short@email.com',
+      active: 'now',
+      active_color: 'success',
+      revenue: '640.00',
+      transactions: 20,
+      items_sold: 28,
+      sales_value: '210.00'
+    },
+    {
+      name: 'Mark Ups',
+      image: 'assets/images/avatars/person-6.jpg',
+      email: 'mark_ups@email.com',
+      active: '8 minutes ago',
+      active_color: 'muted',
+      revenue: '525.00',
+      transactions: 16,
+      items_sold: 21,
+      sales_value: '185.00'
+    },
+    {
+      name: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      email: 'karen_smith@email.com',
+      active: '2 hours ago',
+      active_color: 'muted',
+      revenue: '440.00',
+      transactions: 12,
+      items_sold: 15,
+      sales_value: '120.00'
+    },
+    {
+      name: 'Tara Knows',
+      image: 'assets/images/avatars/person-9.jpg',
+      email: 'tara_knows@email.com',
+      active: '9 hours ago',
+      active_color: 'muted',
+      revenue: '310.00',
+      transactions: 8,
+      items_sold: 11,
+      sales_value: '95.00'
+    }
+
+  ]
+%}
+
+{% block scripts %}
+  <script src="assets/vendor/bootstrap-datepicker.min.js"></script>
+  <script src="assets/js/datepicker.js"></script>
+  <script src="assets/vendor/Chart.min.js"></script>
+  <script src="assets/vendor/morris.min.js"></script>
+  <script src="assets/vendor/raphael.min.js"></script>
+  <script src="assets/js/charts_retail.js"></script>
+  <script>
+    $(".check-sales").click(function(){
+      $('.sale').not(this).prop('checked', this.checked);
+    });
+
+    $(".check-employees").click(function(){
+      $('.employee').not(this).prop('checked', this.checked);
+    });
+
+    // Get current date
+    let today   = new Date();
+    let dd    = today.getDate();
+    let mm    = today.getMonth() + 1;
+    const yyyy  = today.getFullYear();
+
+    if(dd < 10) {
+        dd = '0' + dd
+    }
+
+    if(mm < 10) {
+        mm = '0' + mm
+    }
+
+    today = mm + '/' + dd + '/' + yyyy;
+
+    $('.datepicker-retail').val(today)
+  </script>
+{% endblock %}

@@ -1,0 +1,101 @@
+<div class="container-fluid">
+  <h1 class="h2 mb-0">MacBook Pro</h1>
+  <ol class="breadcrumb p-0 mb-3">
+    <li>
+      <a href="#">Dashboards</a>
+    </li>
+    <li>
+      <a href="retail.html">Retail</a>
+    </li>
+    <li class="text-muted">
+      Product
+    </li>
+  </ol>
+  <div class="card card-body">
+    <div class="row">
+      <div class="col-lg-5">
+        <img src="assets/images/macbook-pro.jpg" alt="MacBook Pro" class="img-fluid">
+      </div>
+      <div class="col-lg-7 d-flex flex-column justify-content-between">        
+        <div>
+          <div class="text-muted mb-3">#12288920</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quas illum tempore iusto magni libero aut a reprehenderit voluptates nihil similique officiis excepturi reiciendis, deserunt voluptatum nemo debitis quam, consequatur.
+          </p>
+          <strong>Tehnical Specifications:</strong>
+          <ul class="list-unstyled mb-3">
+            <li>- Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+            <li>- Consectetur adipisicing elit</li>
+            <li>- Pariatur dignissimos fuga suscipit</li>
+            <li>- Quas, illum</li>
+          </ul>
+          <h4 class="mb-1">
+            &dollar;2400.00
+          </h4>
+          <div class="badge badge-tag">Productivity</div>
+          <div class="badge badge-tag">Tech</div>
+          <div class="badge badge-tag">Laptop</div>
+          <div class="badge badge-tag">Apple</div>
+        </div>
+        <div>
+          <a href="shopping-cart.html" class="btn btn-success">
+            <i class="material-icons md-18 align-middle">shopping_cart</i>
+            <span class="align-middle">Add to cart</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h4 class="mb-0">Product Reviews</h4>
+  <hr>
+  <div class="row">
+    {% for review in reviews %}
+    <div class="col-lg-4">
+      <div class="card card-review">
+        <div class="card-body">
+          <div class="media align-items-center">
+            <img src="{{ review.user_image }}" alt="{{ review.user }}" class="rounded-circle mr-2" width="35">
+            <div class="media-body">
+              <div>{{ review.user }} <small>said</small></div>
+              <div class="text-muted">{{ review.content }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="text-muted">{{ review.date }}</span>
+            <div>
+              <i class="material-icons md-18 align-middle text-warning">star</i>
+              <i class="material-icons md-18 align-middle text-warning">star</i>
+              <i class="material-icons md-18 align-middle text-warning">star</i>
+              <i class="material-icons md-18 align-middle text-warning">star</i>
+              <i class="material-icons md-18 align-middle text-warning">star_half</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h4 class="mb-0">People were also interested in</h4>
+  <hr>
+
+  <div class="owl-carousel owl-theme">
+    {% for product in products %}
+      <div class="card card-product">
+        <img src="{{ product.image }}" alt="{{ product.name }}" class="card-img-top" width="100">
+        <div class="card-body">
+          <a href="product.html" class="h4 text-primary-dark mb-0">{{ product.name }}</a>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores accusamus eos tempore sed
+          </p>
+          <div class="lead text-primary">
+            &dollar;{{ product.price }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

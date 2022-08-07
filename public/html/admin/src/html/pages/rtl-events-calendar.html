@@ -1,0 +1,20 @@
+---
+title: Hero
+slug: events-calendar
+category: calendar
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Events Calendar'
+---
+{% extends "./layouts/rtl-default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-fullcalendar.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/vendor-fullcalendar.rtl.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+  {% include 'partials/modal.edit-event.html' %}
+  <script src="assets/vendor/fullcalendar.min.js"></script>
+  <script src="assets/vendor/jquery-ui.min.js"></script>
+  <script src="assets/js/drag_drop_events.js"></script>
+{% endblock %}

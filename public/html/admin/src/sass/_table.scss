@@ -1,0 +1,61 @@
+.table tr th {
+  border-top: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.table-dark {
+  background-color: theme-color('primary-dark');
+}
+
+.table .thead-dark th {
+ background-color: theme-color('primary-dark');
+ color: #eff4f8;
+}
+
+.datepicker td .active.day {
+  background-color: theme-color('primary') !important;
+  border-color: theme-color('primary') !important;
+}
+
+#timeline-datepicker {
+  .datepicker table {
+    width: 100% !important;
+  }
+  .datepicker-inline {
+    width: 100% !important;
+  }
+}
+
+.collaborators-tasks {
+  margin: 0;
+  td {
+    vertical-align: middle;
+  }
+}
+
+.table {
+  &.table-cart, &.table-retail {
+    margin: 0;
+    thead th {
+      border-top: 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.table.table-projects {
+  thead th {
+    border: 0;
+    color: theme-color('muted-color');
+    text-transform: none;
+  }
+
+  tbody tr {
+    background-color: #ffffff;
+    border: 0;
+    td {
+      vertical-align: middle;
+    }
+  }
+}
