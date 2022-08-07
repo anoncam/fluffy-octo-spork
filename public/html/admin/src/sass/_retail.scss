@@ -1,0 +1,20 @@
+.new-order {
+  .custom-select {
+    width: 200px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .new-order {
+    .custom-select {
+      width: 100%;
+      margin-bottom: $spacer / 2;
+    }
+    .input-group {
+      margin-bottom: $spacer / 2;
+    }
+    .btn {
+      display: block;
+    }
+  }
+}

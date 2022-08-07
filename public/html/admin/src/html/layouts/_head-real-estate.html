@@ -1,0 +1,87 @@
+{% set prefix_theme = theme + '-' if theme %}
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <div class="media align-items-center">
+    <a href="index.html" class="drawer-brand-circle mr-2">H</a>
+    <div class="media-body">
+      <a href="index.html" class="page-title m-0">Hero - Real Estate</a>
+    </div>
+  </div>
+
+  <button class="btn btn-link text-white pl-0 d-md-none" type="button" data-toggle="sidebar">
+    <i class="material-icons align-middle md-36">short_text</i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="mainNavbar">
+    <ul class="navbar-nav ml-auto align-items-center">
+      <li class="nav-item nav-link">
+        <a class="btn btn-white" href="index.html">
+          <i class="material-icons align-middle md-18">chevron_left</i>
+          Back to Dashboard
+        </a>
+      </li>
+      <li class="nav-item align-self-center">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-expanded="false">
+          Browse
+        </a>
+      </li>
+      <li class="nav-item align-self-center">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-expanded="false">
+          Add Property
+        </a>
+      </li>
+      <li class="nav-item align-self-center">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-expanded="false">
+          Contact us
+        </a>
+      </li>
+      <li class="nav-item nav-divider">
+        <li class="nav-item dropdown nav-dropdown d-flex align-items-center">
+          <a href="#" class="nav-link dropdown-toggle dropdown-clear-caret" data-toggle="dropdown" aria-expanded="false">
+            Frontted
+            <img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="img-fluid rounded-circle ml-1" width="35"
+            alt="">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-account">
+            <ul class="list-unstyled">
+              <li>
+                <a href="account.html" class="dropdown-item {% if slug === 'pages-account' %}active{% endif %}">
+                  <i class="material-icons md-18 align-middle mr-1">lock</i>
+                  <span class="align-middle">Account</span>
+                </a>
+              </li>
+              <li>
+                <a href="profile.html" class="dropdown-item {% if slug === 'pages-profile' %}active{% endif %}">
+                  <i class="material-icons md-18 align-middle mr-1">account_circle</i>
+                  <span class="align-middle">Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item">
+                  <i class="material-icons md-18 align-middle mr-1">settings</i>
+                  <span class="align-middle">Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item">
+                  <i class="material-icons md-18 align-middle mr-1">build</i>
+                  <span class="align-middle">Support</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item">
+                  <i class="material-icons md-18 align-middle mr-1">question_answer</i>
+                  <span class="align-middle">FAQ</span>
+                </a>
+              </li>
+              <li>
+                <a href="login.html" class="dropdown-item">
+                  <i class="material-icons md-18 align-middle mr-1">exit_to_app</i>
+                  <span class="align-middle">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>

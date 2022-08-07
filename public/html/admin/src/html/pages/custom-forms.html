@@ -1,0 +1,19 @@
+---
+title: Hero
+slug: custom-forms
+category: forms
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Custom Forms'
+---
+{% extends "./layouts/default.html" %}
+
+{% block scripts %}
+<script src="assets/vendor/select2.full.min.js"></script>
+
+<script>
+  $('.select-2').select2({
+    theme: 'bootstrap',
+    placeholder: 'Select an option'
+  });
+</script>
+{% endblock %}

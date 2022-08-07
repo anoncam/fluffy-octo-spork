@@ -1,0 +1,212 @@
+
+{%
+  set tickets = [
+    {
+      date: '7 Nov 2017',
+      description: 'Bug fixes for initial release',
+      avatar: 'lucas-sankey-378674.jpg',
+      milestone: 'Initial Release'
+    },
+    {
+      date: '31 Oct 2017',
+      description: 'Style cleanup and code refactor',
+      avatar: 'andrew-robles-300868.jpg',
+      milestone: 'Alpha Release'
+    },
+    {
+      date: '9 Oct 2017',
+      description: 'Updated asset pipeline configuration',
+      avatar: 'nathan-fertig-67862.jpg',
+      milestone: 'Initial Release'
+    },
+    {
+      date: '7 Oct 2017',
+      description: 'Fixed visual bugs on lists',
+      avatar: 'lucas-sankey-378674.jpg',
+      milestone: 'Bug Fixes'
+    },
+    {
+      date: '1 Oct 2017',
+      description: 'Added global styling on tables',
+      avatar: 'andrew-robles-300868.jpg',
+      milestone: 'Global Styling'
+    },
+    {
+      date: '1 Oct 2017',
+      description: 'Added progress bars on dashboard',
+      avatar: 'louis-blythe-218641.jpg',
+      milestone: 'Global Styling'
+    }
+  ]
+%}
+
+  <div class="card">
+    <div class="card-header">
+      <div class="d-flex align-items-center justify-content-between">
+        <h4 class="card-title">
+          Users Traffic
+        </h4>
+        <div class="badge badge-warning--filled align-self-middle">+48,6%</div>
+      </div>
+    </div>
+    <div class="card-body bg-body-bg">
+      <canvas id="members-chart"  style="height: 200px; width: 100%;"></canvas>
+    </div>
+    <div class="card-group">
+      <div class="card card-body text-center">
+        <h3 class="mb-0">419</h3>
+        <div class="h6 m-0 text-primary">REGISTRATIONS</div>
+      </div>
+      <div class="card card-body text-center border-0">
+        <h3 class="mb-0">$19,091</h3>
+        <div class="h6 m-0 text-success">SALES</div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card-group mb-4">
+        <div class="card p-3">
+          <p class="text-center"><img src="assets/images/avatars/lucas-sankey-378674.jpg" class="rounded-circle mr-1" width="50" height="50" alt=""></p>
+          <div class="d-flex justify-content-center mb-1">
+            <h4 class="mb-0 mr-1">2250</h4>
+            <span class="align-self-end">pts</span>
+          </div>
+          <d-flex class="text-center mb-3">
+            <i class="material-icons align-middle text-warning">star</i>
+            <i class="material-icons align-middle text-warning">star</i>
+            <i class="material-icons align-middle text-warning">star</i>
+            <i class="material-icons align-middle text-warning">star_half</i>
+            <i class="material-icons align-middle text-muted">star_border</i>
+          </d-flex>
+          <a href="#" class="btn btn-white btn-sm">View Stats</a>
+        </div>
+        <div class="card card-body bg-primary">
+
+          <h4 class="m-0 text-white">Almost there, Adrian!</h4>
+          <p class="text-light">
+            Complete 4 more tasks to unlock your next rank and receive even more experience points.
+            You can trade your experience points for money at any time.
+          </p>
+           <a href="#" class="text-white"><strong>read more...</strong></a>
+        </div>
+    </div>
+
+      <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <h4 class="card-title">Overdue Tasks</h4>
+        <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#newTicketModal">
+          <span class="align-middle">VIEW ALL</span>
+        </a>
+      </div>
+      <ul class="list-group list-group-flush">
+        {% for ticket in tickets %}
+        <li class="list-group-item">
+          <div class="media align-items-center">
+             <a href="#">  <img src="assets/images/avatars/{{ ticket.avatar }}" class="rounded-circle mr-2" width="30" alt=""></a>
+            <div class="media-body lh-1">
+              <a href="#" class="m-0 h6">{{ ticket.description }}</a>
+              <div>
+                <small class="text-muted">{{ ticket.milestone }}</small>
+              </div>
+            </div>
+             <div class="text-danger" >
+              <i class="material-icons md-14 align-middle">access_time</i>
+              <small class="align-middle">{{ ticket.date }}</small>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <h4 class="card-title">View Goals</h4>
+        <a href="#" class="btn btn-white btn-sm" data-toggle="modal" data-target="#newTicketModal">
+          <i class="material-icons md-18 align-middle">edit</i>
+        </a>
+      </div>
+      <div class="p-2">
+        <div class="d-flex align-items-center">
+            <div id="goals-chart" class="mb-3" style="width: 50%; height: 200px;"></div>
+            <div class="">
+                <p class="lead text-muted mb-0">
+                Views today
+              </p>
+              <h4 class="mb-0 text-primary">2806</h4>
+            </div>
+        </div>
+      </div>
+      <div class="px-3 pb-3">
+        <div class="card-group">
+          <div class="card bg-body-bg">
+              <div class="card-body text-center">
+              <span class="badge badge-link-color--filled mb-1">3000 views</span>
+              <p class="mb-0">Goal Status</p>
+            </div>
+          </div>
+          <div class="card bg-body-bg">
+            <div class="card-body text-center">
+
+              <span class="badge badge-success--filled mb-1">5 min</span>
+              <p class="mb-0">Average Visit</p>
+            </div>
+          </div>
+          <div class="card bg-body-bg">
+            <div class="card-body text-center">
+            <span class="badge badge-warning--filled mb-1">2109 pts</span>
+            <p class="mb-0">Social Shares</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="card-deck">
+      <div class="card p-2 pl-3 pr-3">
+        <div class="media align-items-center">
+          <div class="doughnut-chart-wrapper mr-1">
+            <div class="doughnut-chart-text">
+              <div>
+                <h3 class="text-danger">12%</h3>
+                <small>TODAY</small>
+              </div>
+            </div>
+            <canvas class="doughnut-chart" data-percent="12" width="100" height="100"></canvas>
+          </div>
+          <div class="media-body">
+            <h3 class="mb-0">$1,020</h3>
+            <span class="text-muted">Total Sales</span>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+      <!-- <div class="col-md-3"> -->
+      <div class="card p-2 pl-3 pr-3">
+        <div class="media align-items-center">
+          <div class="doughnut-chart-wrapper mr-1">
+            <div class="doughnut-chart-text">
+              <div>
+                <h3 class="text-success">68%</h3>
+                <small>MONTH</small>
+              </div>
+            </div>
+            <canvas class="doughnut-chart" data-percent="68" width="100" height="100"></canvas>
+          </div>
+          <div class="media-body">
+            <h3 class="mb-0">$6,670</h3>
+            <span class="text-muted">Sales for June</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END STATS -->
+  </div>
+</div>

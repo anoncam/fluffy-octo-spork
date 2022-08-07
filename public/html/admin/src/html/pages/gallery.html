@@ -1,0 +1,91 @@
+---
+title: Hero
+slug: gallery
+category: gallery
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Gallery'
+---
+{% extends "./layouts/default.html" %}
+
+{%
+  set images = [
+    {
+      name: 'Person 1',
+      src: 'assets/images/avatars/person-1.jpg'
+    },
+    {
+      name: 'Person 2',
+      src: 'assets/images/avatars/person-2.jpg'
+    },
+    {
+      name: 'Person 3',
+      src: 'assets/images/avatars/person-3.jpg'
+    },
+    {
+      name: 'Person 4',
+      src: 'assets/images/avatars/person-4.jpg'
+    },
+    {
+      name: 'Person 5',
+      src: 'assets/images/avatars/person-5.jpg'
+    },
+    {
+      name: 'Person 6',
+      src: 'assets/images/avatars/person-6.jpg'
+    },
+    {
+      name: 'Person 7',
+      src: 'assets/images/avatars/person-7.jpg'
+    },
+    {
+      name: 'Person 8',
+      src: 'assets/images/avatars/person-8.jpg'
+    },
+    {
+      name: 'Person 9',
+      src: 'assets/images/avatars/person-9.jpg'
+    },
+    {
+      name: 'Person 10',
+      src: 'assets/images/avatars/person-10.jpg'
+    },
+    {
+      name: 'Person 11',
+      src: 'assets/images/avatars/person-11.jpg'
+    },
+    {
+      name: 'Person 12',
+      src: 'assets/images/avatars/person-12.jpg'
+    },
+    {
+      name: 'Person 13',
+      src: 'assets/images/avatars/person-13.jpg'
+    },
+    {
+      name: 'Person 14',
+      src: 'assets/images/avatars/person-14.jpg'
+    },
+    {
+      name: 'Person 15',
+      src: 'assets/images/avatars/person-15.jpg'
+    },
+    {
+      name: 'Person 16',
+      src: 'assets/images/avatars/person-16.jpg'
+    }
+  ]
+%}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-dragula.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/vendor-fancybox.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+  <script src="assets/vendor/dragula.min.js"></script>
+  <script src="assets/vendor/jquery.fancybox.min.js"></script>
+
+  <script>
+    dragula([document.getElementById('drag-cards')]);
+  </script>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ title }}</title>
+
+  {% block head %}{% endblock %}
+  {% include 'layouts/_header.html' %}
+</head>
+<body>
+  <div class="mdk-drawer-layout js-mdk-drawer-layout" data-fullbleed data-push data-has-scrolling-region>
+    <div class="mdk-drawer-layout__content mdk-header-layout__content--scrollable"  style="overflow-y: auto;" data-simplebar data-simplebar-force-enabled="true">
+
+      {% block page %}
+        {% include 'partials/page.' + slug + '.html' ignore missing %}
+      {% endblock %}
+
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // Self Initialize DOM Factory Components
+      domFactory.handler.autoInit();
+    });
+    </script>
+</body>
+</html>

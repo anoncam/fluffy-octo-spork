@@ -1,0 +1,111 @@
+---
+title: Hero
+slug: analytics
+category: analytics
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Analytics'
+---
+{% extends "./layouts/default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
+{% endblock %}
+
+{%
+  set countries = [
+    {
+      name: 'USA',
+      visits: '16890',
+      target: '94',
+      flag: 'assets/images/logos/usa-svg.svg'
+    },
+    {
+      name: 'U.K',
+      visits: '12037',
+      target: '82',
+      flag: 'assets/images/logos/uk-svg.svg'
+    },
+    {
+      name: 'Germany',
+      visits: '9890',
+      target: '68',
+      flag: 'assets/images/logos/germany-svg.svg'
+    },
+    {
+      name: 'France',
+      visits: '6725',
+      target: '55',
+      flag: 'assets/images/logos/france-svg.svg'
+    },
+    {
+      name: 'Australia',
+      visits: '3821',
+      target: '28',
+      flag: 'assets/images/logos/australia-svg.svg'
+    },
+    {
+      name: 'China',
+      visits: '1892',
+      target: '12',
+      flag: 'assets/images/logos/china-svg.svg'
+    }
+  ]
+%}
+
+{%
+  set devices = [
+    {
+      name: 'Mobile',
+      visits: '16890',
+      logo: 'assets/images/logos/chrome_48x48.png'
+    },
+    {
+      name: 'Tablet',
+      visits: '12037',
+      logo: 'assets/images/logos/firefox_48x48.png'
+    },
+    {
+      name: 'Desktop',
+      visits: '9890',
+      logo: 'assets/images/logos/safari_48x48.png'
+    }
+  ]
+%}
+
+{%
+  set operating_systems = [
+    {
+      name: 'iOS',
+      visits: '12887',
+      logo: 'assets/images/logos/chrome_48x48.png'
+    },
+    {
+      name: 'Android',
+      visits: '9875',
+      logo: 'assets/images/logos/firefox_48x48.png'
+    },
+    {
+      name: 'macOS',
+      visits: '7010',
+      logo: 'assets/images/logos/safari_48x48.png'
+    },
+    {
+      name: 'Windows',
+      visits: '3856',
+      logo: 'assets/images/logos/safari_48x48.png'
+    },
+    {
+      name: 'Linux',
+      visits: '1025',
+      logo: 'assets/images/logos/safari_48x48.png'
+    }
+  ]
+%}
+
+{% block scripts %}
+  <script src="assets/vendor/Chart.min.js"></script>
+  <script src="assets/vendor/morris.min.js"></script>
+  <script src="assets/vendor/raphael.min.js"></script>
+  <script src="assets/js/charts_analytics.js"></script>
+  <script src="assets/js/charts_index.js"></script>
+{% endblock %}

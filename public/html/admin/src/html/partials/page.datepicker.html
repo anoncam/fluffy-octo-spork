@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <h2>Datepicker</h2>
+  <p class="lead">
+    Custom datepicking forms.
+  </p>
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Inline</h4>
+    </div>
+    <div class="card-body">
+      <div data-date="dateFormat(new Date(), 'mm/dd/yy')" class="datepicker"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Input field</h4>
+    </div>
+    <div class="card-body">
+      <input type="text" class="datepicker form-control" value="02-16-2012">
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Component</h4>
+    </div>
+    <div class="card-body">
+      <div class="input-group input-daterange">
+        <input type="text" class="form-control" value="12-02-2012">
+        <div class="input-group-append">
+          <span class="input-group-text material-icons">menu</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Date Range</h4>
+    </div>
+    <div class="card-body">
+      <div class="input-group input-daterange">
+        <input type="text" class="form-control" value="05-10-2017">
+        <div class="input-group-append">
+          <div class="input-group-text">to</div>
+        </div>
+        <input type="text" class="form-control" value="05-20-2017">
+      </div>
+    </div>
+  </div>
+</div>

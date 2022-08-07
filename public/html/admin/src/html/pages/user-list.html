@@ -1,0 +1,49 @@
+---
+title: Hero
+slug: user-list
+category: user-list
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'User list'
+---
+{% extends "./layouts/default.html" %}
+
+{%
+  set users = [
+    {
+      name: 'Andrew Robles',
+      status: 'active now',
+      image: 'assets/images/avatars/person-1.jpg',
+      address: '1st Avenue, New York'
+    },
+    {
+      name: 'Tara Knows',
+      status: 'active now',
+      image: 'assets/images/avatars/person-9.jpg',
+      address: 'Street 9021, Washington DC'
+    },
+    {
+      name: 'Mark Ups',
+      status: 'active now',
+      image: 'assets/images/avatars/person-5.jpg',
+      address: '4th Boulevard, Washington DC'
+    },
+    {
+      name: 'Steven Short',
+      status: 'active 8m ago',
+      image: 'assets/images/avatars/person-3.jpg',
+      address: '3rd Avenue, New York'
+    },
+    {
+      name: 'Karen Smith',
+      status: 'active 46m ago',
+      image: 'assets/images/avatars/person-8.jpg',
+      address: '2201 Street, New York'
+    },
+    {
+      name: 'John Smith',
+      status: 'active 4h ago',
+      image: 'assets/images/avatars/person-10.jpg',
+      address: 'Street 7366, San Francisco'
+    }
+  ]
+%}

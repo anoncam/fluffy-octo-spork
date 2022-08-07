@@ -1,0 +1,358 @@
+<div class="container-fluid">
+  <div class="row align-items-center mb-3">
+    <div class="col-md-8">
+      <h1 class="h2 mb-0">Manage Project</h1>
+      <ol class="breadcrumb p-0">
+        <li>
+          <a href="#">Dashboards</a>
+        </li>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+        <li class="text-muted">
+          Project
+        </li>
+      </ol>
+    </div>
+    <div class="col-md-4 text-lg-right">
+      <div class="form-group m-0">
+        <div class="input-group input-group--inline">
+          <div class="input-group-addon">
+            <i class="material-icons">search</i>
+          </div>
+          <input class="form-control" name="search" placeholder="Search task, bug, issue, user..." type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h4 class="card-title">
+                E-Commerce Development
+              </h4>
+              <div class="text-muted">
+                <span>Project Manager: Mark Ups</span> |
+                <span>Start date: 18 Apr, 2018</span> |
+                <span>Due date: 18 Nov, 2018</span>
+              </div>
+            </div>
+            <div class="col-lg-4 text-lg-right">
+              <a href="#" class="btn btn-sm btn-white mr-1">
+                <i class="material-icons md-18 align-middle">import_export</i>
+                <small class="align-middle text-uppercase">Export</small>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="doughnut-chart-wrapper">
+                <div class="doughnut-chart-text">
+                  <div>
+                    <h3 class="text-danger">12</h3>
+                    <small>Bugs</small>
+                  </div>
+                </div>
+                <canvas class="doughnut-chart" data-percent="12"></canvas>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="doughnut-chart-wrapper">
+                <div class="doughnut-chart-text">
+                  <div>
+                    <h3 class="text-warning">49</h3>
+                    <small>Issues</small>
+                  </div>
+                </div>
+                <canvas class="doughnut-chart" data-percent="49"></canvas>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="doughnut-chart-wrapper">
+                <div class="doughnut-chart-text">
+                  <div>
+                    <h3 class="text-success">65</h3>
+                    <small>Fixes</small>
+                  </div>
+                </div>
+                <canvas class="doughnut-chart" data-percent="65"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="card-subtitle line-through text-muted text-center my-3">
+            <span>Project Status</span>
+          </div>
+          <div class="row mb-3">
+            <div class="col-lg-6">
+              <div class="d-flex justify-content-between mb-1">
+                <span>Overall progress</span>
+                <span class="text-primary">75%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-1">Bug fixing</div>
+              <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 12%;" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="mb-1">Issues fixing</div>
+              <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 49%;" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="mb-1">Tasks fixed</div>
+              <div class="progress">
+                <div class="progress-bar bg-success" style="width: 65%;" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="d-flex align-items-center justify-content-between">
+            <h4 class="card-title">Collaborators</h4>
+            <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#newCollaboratorModal">
+              <i class="material-icons md-18 align-middle">add</i>
+              <span class="align-middle text-uppercase">Add new</span>
+            </a>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-fade">
+            <strong>Managers</strong>
+          </li>
+          {% for leader in leaders %}
+          <li class="list-group-item py-3">
+            <div class="media align-items-center">
+              <img src="{{ leader.image }}" alt="{{ leader.name }}" width="35" class="rounded-circle mr-2">
+              <div class="media-body">
+                <div>
+                  <a href="profile.html">{{ leader.name }}</a>
+                  {{ leader.status }}
+                </div>
+                <div>
+                  {{ leader.address }}
+                </div>
+                <div>
+                  {{ leader.role }}
+                </div>
+              </div>
+              <a href="#" data-toggle="dropdown"  aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right" >
+                <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+          <li class="list-group-item bg-fade">
+            <strong>Front-End</strong>
+          </li>
+          {% for front_end in front_ends %}
+          <li class="list-group-item py-3">
+            <div class="media align-items-center">
+              <img src="{{ front_end.image }}" alt="{{ front_end.name }}" width="35" class="rounded-circle mr-2">
+              <div class="media-body">
+                <div>
+                  <a href="profile.html">{{ front_end.name }}</a>
+                  {{ front_end.status }}
+                </div>
+                <div>
+                  {{ front_end.address }}
+                </div>
+                <div>
+                  {{ front_end.role }}
+                </div>
+              </div>
+              <a href="#" data-toggle="dropdown"  aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right" >
+                <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+          <li class="list-group-item bg-fade">
+            <strong>Back-End</strong>
+          </li>
+          {% for back_end in back_ends %}
+          <li class="list-group-item py-3">
+            <div class="media align-items-center">
+              <img src="{{ back_end.image }}" alt="{{ back_end.name }}" width="35" class="rounded-circle mr-2">
+              <div class="media-body">
+                <div>
+                  <a href="profile.html">{{ back_end.name }}</a>
+                  {{ back_end.status }}
+                </div>
+                <div>
+                  {{ back_end.address }}
+                </div>
+                <div>
+                  {{ back_end.role }}
+                </div>
+              </div>
+              <a href="#" data-toggle="dropdown"  aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right" >
+                <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-header">
+          <div class="d-flex align-items-center justify-content-between">
+            <h4 class="card-title">Latest tasks</h4>
+            <a href="#">
+              <i class="material-icons md-18 align-middle">sync</i>
+            </a>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          {% for task in tasks %}
+          <li class="list-group-item">
+            <div class="media align-items-center">
+              <div class="text-muted mr-2">{{ task.id }}</div>
+              <div class="media-body">
+                {{ task.name }}
+              </div>
+              <img src="{{ task.user_image }}" alt="{{ task.user }}" class="rounded-circle" width="35">
+            </div>
+          </li>
+          {% endfor %}
+          <li class="list-group-item text-center">
+            <a href="project-tasks.html">View All</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Overview</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis maxime saepe magnam suscipit repellat aperiam quo, tempora libero praesentium. Eius porro expedita facere odio, praesentium laudantium culpa fuga temporibus deserunt!
+          </p>
+
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Collapsible Group Item #1
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere vel eveniet doloribus suscipit laborum quibusdam reiciendis dolore, aliquid natus dolorem, autem accusamus incidunt esse, obcaecati quia accusantium? Corporis, eveniet, dolor!
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Collapsible Group Item #2
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ad distinctio et ea amet qui omnis iste, facere id voluptatibus eveniet saepe quas numquam beatae inventore! Voluptatum provident deleniti adipisci.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Collapsible Group Item #3
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas in ut quisquam mollitia. Delectus ratione, asperiores aperiam, repellendus perspiciatis tempora recusandae est numquam libero fugit, et voluptate inventore. Iusto, nesciunt.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="d-flex align-items-center justify-content-between">
+            <h4 class="card-title">Latest activity</h4>
+            <a href="#">
+              <i class="material-icons md-18 align-middle">sync</i>
+            </a>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          {% for activity in activities %}
+          <li class="list-group-item py-3">
+            <div class="media">
+              <i class="material-icons md-18 align-middle text-{{ activity.icon_color }} mr-2">{{ activity.icon }}</i>
+              <div class="media-body">
+                <a href="profile.html">
+                  {{ activity.user }}
+                </a>
+                {{ activity.name }}
+              </div>
+              <div class="text-muted">
+                {{ activity.date }}
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

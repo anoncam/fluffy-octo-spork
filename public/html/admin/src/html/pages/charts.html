@@ -1,0 +1,20 @@
+---
+title: Hero
+slug: charts
+category: charts
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Charts'
+---
+{% extends "./layouts/default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+  <script src="assets/vendor/Chart.min.js"></script>
+  <script src="assets/vendor/morris.min.js"></script>
+  <script src="assets/vendor/raphael.min.js"></script>
+  <script src="assets/js/charts_index.js"></script>
+  <script src="assets/js/charts.js"></script>
+{% endblock %}
