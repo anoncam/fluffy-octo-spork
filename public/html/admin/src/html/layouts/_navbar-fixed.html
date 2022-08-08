@@ -1,0 +1,61 @@
+{% set prefix_theme = theme + '-' if theme %}
+<nav class="navbar navbar-mini navbar-expand-md {{ navbarClass if navbarClass else 'navbar-light' }} d-print-none mb-3">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav justify-content-center w-100">
+        <li class="nav-item dropdown ml-0">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dashboard</a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item dropdown-item-action">Dashboard 1</a>
+            <a href="index-second.html" class="dropdown-item dropdown-item-action {% if slug == 'index-second' %} active {% endif %}">Dashboard 2</a>
+            <a href="index-third.html" class="dropdown-item dropdown-item-action">Dashboard 3</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Pages</a>
+          <div class="dropdown-menu">
+            <a href="ui-buttons.html" class="dropdown-item">Buttons</a>
+            <a href="ui-colors.html" class="dropdown-item">Colors</a>
+            <a href="ui-grid.html" class="dropdown-item">Grid</a>
+            <a href="ui-typography.html" class="dropdown-item">Typography</a>
+            <a href="ui-drag-drop.html" class="dropdown-item">Drag &amp; Drop</a>
+            <a href="ui-tables.html" class="dropdown-item">Tables</a>
+            <a href="ui-notifications.html" class="dropdown-item">Notifications</a>
+            <a href="ui-loaders.html" class="dropdown-item">Loaders</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">UI</a>
+          <div class="dropdown-menu">
+            <a href="ui-buttons.html" class="dropdown-item">Buttons</a>
+            <a href="ui-colors.html" class="dropdown-item">Colors</a>
+            <a href="ui-grid.html" class="dropdown-item">Grid</a>
+            <a href="ui-typography.html" class="dropdown-item">Typography</a>
+            <a href="ui-drag-drop.html" class="dropdown-item">Drag &amp; Drop</a>
+            <a href="ui-tables.html" class="dropdown-item">Tables</a>
+            <a href="ui-notifications.html" class="dropdown-item">Notifications</a>
+            <a href="ui-loaders.html" class="dropdown-item">Loaders</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Widgets</a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item dropdown-item-action">Default Layout (fluid)</a>
+            <a href="index-drawer-light.html" class="dropdown-item dropdown-item-action">Sidebar - Light Color</a>
+            <a href="index-navbar-primary.html" class="dropdown-item dropdown-item-action">Navbar - Primary</a>
+            <a href="index-drawer-right.html" class="dropdown-item dropdown-item-action">Layout Sidebar Right</a>
+            <a href="index-fixed.html"  class="dropdown-item dropdown-item-action {% if slug == 'index-fixed' %} active {%endif%}">Fixed Layout</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown ml-0">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Mega Menu</a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item dropdown-item-action">Dashboard 1</a>
+            <a href="index-second.html" class="dropdown-item dropdown-item-action {% if slug == 'index-second' %} active {% endif %}">Dashboard 2</a>
+            <a href="index-third.html" class="dropdown-item dropdown-item-action">Dashboard 3</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

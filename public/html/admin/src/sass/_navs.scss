@@ -1,0 +1,8 @@
+.nav-tabs-notifications {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  .nav-item .nav-link {
+    padding: 0;
+  }
+}

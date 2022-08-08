@@ -1,0 +1,49 @@
+---
+title: Hero
+slug: profile
+category: profile
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Profile'
+---
+{% extends "./layouts/default.html" %}
+
+{%
+  set users = [
+  {
+    name: 'Andrew Robles',
+    icon_color: 'success',
+    status: 'active now',
+    image: 'assets/images/avatars/person-1.jpg'
+  },
+  {
+    name: 'Tara Knows',
+    icon_color: 'success',
+    status: 'active now',
+    image: 'assets/images/avatars/person-9.jpg'
+  },
+  {
+    name: 'Mark Ups',
+    icon_color: 'success',
+    status: 'active now',
+    image: 'assets/images/avatars/person-5.jpg'
+  },
+  {
+    name: 'Steven Short',
+    icon_color: 'muted',
+    status: 'active 8m ago',
+    image: 'assets/images/avatars/person-3.jpg'
+  },
+  {
+    name: 'Karen Smith',
+    icon_color: 'muted',
+    status: 'active 46m ago',
+    image: 'assets/images/avatars/person-8.jpg'
+  },
+  {
+    name: 'John Smith',
+    icon_color: 'muted',
+    status: 'active 4h ago',
+    image: 'assets/images/avatars/person-10.jpg'
+  }
+  ]
+%}

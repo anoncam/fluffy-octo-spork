@@ -1,0 +1,27 @@
+<div id="calendar-events" class="d-flex justify-content-between h-100 bg-white">
+  <div class="events--sidebar d-none d-xl-block">
+    <button class="btn btn-white btn-sm d-block d-sm-none" data-toggle="events--sidebar"><i class="material-icons md-18 align-middle">close</i> <span class="align-middle">Close</span></button>
+    <div id='external-events' class="p-3">
+      <div id='external-events-listing' class="mb-3">
+        <div class='fc-event mb-1 p-1' data-color='#549DE3'>Morning Dev Talks</div>
+        <div class='fc-event mb-1 p-1' data-color='#6774DF'>New Product Conference</div>
+        <div class='fc-event mb-1 p-1' data-color='#ff7076'>Important meeting</div>
+        <div class='fc-event mb-1 p-1' data-color='#F5B666'>Bug Fixing Discussions</div>
+        <div class='fc-event mb-1 p-1' data-color='#7DC668'>Lunch Break</div>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input drop-remove" id="customCheck1">
+        <label class="custom-control-label" for="customCheck1">Remove after drop</label>
+      </div>
+    </div>
+  </div>
+  <div class="mainContent p-3 d-flex flex-column w-100">
+    <button class="btn btn-primary d-lg-none mb-3 text-left" type="button" id="toggleEventsSidebar">
+      <i class="material-icons md-18 align-middle">chevron_left</i> <span class="align-middle">Events</span>
+    </button>
+
+    <h2 class="text-center text-primary">December 2017</h2>
+
+    <div id='calendar1'></div>
+  </div>
+</div>

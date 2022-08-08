@@ -1,0 +1,162 @@
+---
+title: Hero
+slug: project
+category: extra
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Project'
+---
+{% extends "./layouts/default.html" %}
+
+{%
+  set front_ends = [
+    {
+      name: 'Andrew Robles',
+      status: 'active now',
+      image: 'assets/images/avatars/person-1.jpg',
+      role: 'Front-End Developer'
+    },
+    {
+      name: 'Karen Smith',
+      status: 'active 46m ago',
+      image: 'assets/images/avatars/person-8.jpg',
+      role: 'UI / UX Designer'
+    },
+    {
+      name: 'John Smith',
+      status: 'active 4h ago',
+      image: 'assets/images/avatars/person-10.jpg',
+      role: 'Web Designer'
+    }
+  ]
+%}
+
+{%
+  set back_ends = [
+    {
+      name: 'Mark Ups',
+      status: 'active now',
+      image: 'assets/images/avatars/person-5.jpg',
+      role: 'Full Stack Developer'
+    },
+    {
+      name: 'Steven Short',
+      status: 'active 8m ago',
+      image: 'assets/images/avatars/person-3.jpg',
+      role: 'Back-End Developer'
+    },
+    {
+      name: 'Karen Smith',
+      status: 'active 46m ago',
+      image: 'assets/images/avatars/person-8.jpg',
+      role: 'Back-End Developer'
+    }
+  ]
+%}
+
+{%
+  set leaders = [
+    {
+      name: 'Tara Knows',
+      status: 'active now',
+      image: 'assets/images/avatars/person-9.jpg',
+      role: 'Project Manager'
+    },
+    {
+      name: 'Steven Short',
+      status: 'active 8m ago',
+      image: 'assets/images/avatars/person-3.jpg',
+      role: 'AGILE Manager'
+    }
+  ]
+%}
+
+{%
+  set tasks = [
+    {
+      user: 'Andrew Robles',
+      user_image: 'assets/images/avatars/person-1.jpg',
+      name: 'Review payment systems',
+      id: "#31"
+    },
+    {
+      user: 'Steven Young',
+      user_image: 'assets/images/avatars/person-3.jpg',
+      name: 'Create blog section on website',
+      id: "#26"
+    },
+    {
+      user: 'Tara Knows',
+      user_image: 'assets/images/avatars/person-9.jpg',
+      name: 'Refactor user account sections',
+      id: "#11"
+    },
+    {
+      user: 'Karen Smith',
+      user_image: 'assets/images/avatars/person-8.jpg',
+      name: 'Fix server upload issues',
+      id: "#10"
+    },
+    {
+      user: 'Karen Smith',
+      user_image: 'assets/images/avatars/person-8.jpg',
+      name: 'Fix client upload issues',
+      id: "#16"
+    }
+  ]
+%}
+
+{%
+  set activities = [
+    {
+      user: 'Andrew Robles',
+      name: 'completed task #21',
+      icon: 'check_circle',
+      icon_color: 'success',
+      date: 'just now'
+    },
+    {
+      user: 'Tara Knows',
+      name: 'added a new issue',
+      icon: 'warning',
+      icon_color: 'warning',
+      date: '45 mins ago'
+    },
+    {
+      user: 'Mark Ups',
+      name: 'fixed bug #8',
+      icon: 'check',
+      icon_color: 'success',
+      date: '2 hrs ago'
+    },
+    {
+      user: 'Steven Short',
+      name: 'added a new bug',
+      icon: 'error',
+      icon_color: 'danger',
+      date: '5 hrs ago'
+    },
+    {
+      user: 'Karen Smith',
+      name: 'completed task #44',
+      icon: 'check_circle',
+      icon_color: 'success',
+      date: '16 hrs ago'
+    },
+    {
+      user: 'John Smith',
+      name: 'added a new issue',
+      icon: 'warning',
+      icon_color: 'warning',
+      date: '2 days ago'
+    }
+  ]
+%}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+	<script src="assets/js/charts_project.js"></script>
+  {% include 'partials/modal.new-collaborator.html' %}
+{% endblock %}

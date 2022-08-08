@@ -1,0 +1,93 @@
+---
+title: Hero
+slug: real-estate-list
+category: real-estate-list
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Real Estate'
+---
+{% extends "./layouts/real-estate.html" %}
+
+{%
+  set properties = [
+    {
+      title: 'Studio Apartment',
+      image: 'assets/images/property-1.jpg',
+      price: '2400',
+      address: '174 Mulberry St, New York',
+      date: '1 day ago',
+      company: 'Stanley Residential',
+      status: 'Furnished / Immediately Available',
+      details: '89'
+    },
+    {
+      title: '2 Bedroom Flat',
+      image: 'assets/images/property-2.jpg',
+      price: '3900',
+      address: '203 Grand St, New York',
+      date: '2 days ago',
+      company: 'Prime Estates',
+      status: 'Unfurnished / Available from 3rd March',
+      details: '52'
+    },
+    {
+      title: '3 Bedroom Flat',
+      image: 'assets/images/property-3.jpg',
+      price: '4400',
+      address: '203 Grand St, New York',
+      date: '2 days ago',
+      company: 'Prime Estates',
+      status: 'Furnished / Immediately Available',
+      details: '70'
+    },
+    {
+      title: '6 Room House',
+      image: 'assets/images/property-4.jpg',
+      price: '7300',
+      address: '186 Bre Avenue, New York',
+      date: '4 days ago',
+      company: 'Stanley Residential',
+      status: 'Unfurnished / Immediately Available',
+      details: '310'
+    },
+    {
+      title: '1 Bedroom Apartment',
+      image: 'assets/images/property-5.jpg',
+      price: '1100',
+      address: '182 Saint Avenue, New York',
+      date: '5 days ago',
+      company: 'ECX Real Estate',
+      status: 'Furnished / Immediately Available',
+      details: '45'
+    },
+    {
+      title: '2 Bedroom Apartment',
+      image: 'assets/images/property-6.jpg',
+      price: '1250',
+      address: '182 Saint Avenue, New York',
+      date: '5 days ago',
+      company: 'ECX Real Estate',
+      status: 'Furnished / Available from 1st June',
+      details: '59'
+    },
+    {
+      title: 'Studio Flat',
+      image: 'assets/images/property-2.jpg',
+      price: '1350',
+      address: '203 Grand St, New York',
+      date: '6 days ago',
+      company: 'Prime Estates',
+      status: 'Unfurnished / Immediately Available',
+      details: '120'
+    },
+    {
+      title: '1 Bedroom Apartment',
+      image: 'assets/images/property-4.jpg',
+      price: '950',
+      address: '186 Bro Avenue, New York',
+      date: '6 days ago',
+      company: 'Stanley Residential',
+      status: 'Furnished / Immediately Available',
+      details: '48'
+    }
+  ]
+%}

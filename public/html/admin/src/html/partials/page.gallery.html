@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <h2>Gallery</h2>
+  <p class="lead">
+    Image gallery grid with photo-swipe integration.
+  </p>
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Image gallery</h4>
+    </div>
+    <div class="card-body bg-body-bg">
+      <div class="row" id="drag-cards">
+        {% for image in images %}
+          <div class="col-lg-3">
+            <div class="card mb-3">
+              <a href="{{ image.src }}"  data-fancybox="gallery">
+                <img src="{{ image.src }}" alt="{{ image.name }}" class="card-img-top">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title mb-0">{{ image.name }}</h5>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

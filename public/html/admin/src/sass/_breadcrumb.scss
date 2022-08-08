@@ -1,0 +1,25 @@
+.breadcrumb {
+  margin-bottom: 0;
+  padding-left: 0;
+  background-color: transparent;
+  color: theme-color('muted-color');
+  a {
+    color: theme-color('text-color');
+  }
+  li {
+    &:not(:first-of-type) {
+      padding-left: .325rem;
+      &:before {
+        font-family: "Material Icons";
+        content: "\E5CC";
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .breadcrumb {
+    margin-bottom: $spacer;
+  }
+}

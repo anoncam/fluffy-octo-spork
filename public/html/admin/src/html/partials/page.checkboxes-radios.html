@@ -1,0 +1,175 @@
+<div class="container-fluid">
+  <h2>Checkboxes and Radios</h2>
+  <p class="lead">
+    Improved default and custom styled checkboxes, radios and switch buttons.
+  </p>
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Default (stacked)</h4>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="">
+            Option one is this and that&mdash;be sure to include why it's great
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="" disabled>
+            Option two is disabled
+          </label>
+        </div>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          Option one is this and that&mdash;be sure to include why it's great
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          Option two can be something else and selecting it will deselect option one
+        </label>
+      </div>
+      <div class="form-check disabled">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+          Option three is disabled
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Inline</h4>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 2
+          </label>
+        </div>
+        <div class="form-check form-check-inline disabled">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled> 3
+          </label>
+        </div>
+      </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+        </label>
+      </div>
+      <div class="form-check form-check-inline disabled">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled> 3
+        </label>
+      </div>
+    </div>
+  </div>
+  <h4 class="page-section">Custom styling</h4>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Custom Checkboxes</h4>
+    </div>
+    <div class="card-body">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck1">
+        <label class="custom-control-label align-middle" for="customCheck1">Check this custom checkbox</label>
+      </div>
+    </div>
+    <div class="card-header">
+      Custom checkboxes can also utilize the <code>:indeterminate</code> pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+    </div>
+    <div class="card-body">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input ind-checkbox" id="customCheck2">
+        <label class="custom-control-label align-middle" for="customCheck2">Check this custom checkbox</label>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Radios</h4>
+    </div>
+    <div class="card-body">
+      <div class="custom-control custom-radio mb-1">
+        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+        <label class="custom-control-label align-middle" for="customRadio1">Toggle this custom radio</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+        <label class="custom-control-label align-middle" for="customRadio2">Or toggle this other custom radio</label>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Disabled</h4>
+    </div>
+    <div class="card-body">
+      <div class="custom-control custom-checkbox mb-1">
+        <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+        <label class="custom-control-label align-middle" for="customCheckDisabled">Check this custom checkbox</label>
+      </div>
+
+      <div class="custom-control custom-radio">
+        <input type="radio" name="radioDisabled" id="customRadioDisabled" class="custom-control-input" disabled>
+        <label class="custom-control-label align-middle" for="customRadioDisabled">Toggle this custom radio</label>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Checkbox buttons</h4>
+    </div>
+    <div class="card-body">
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="checkbox" name="checkboxOption" id="checkboxOption1" checked> Checked
+        </label>
+        <label class="btn btn-primary">
+          <input type="checkbox" name="checkboxOption" id="checkboxOption2"> Checkbox
+        </label>
+        <label class="btn btn-primary">
+          <input type="checkbox" name="checkboxOption" id="checkboxOption3"> Checkbox
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">
+        Radio buttons
+      </h4>
+    </div>
+    <div class="card-body">
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="radio" name="radioOption" id="radioOption1" checked> Active
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="radioOption" id="radioOption2"> Radio
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="radioOption" id="radioOption3"> Radio
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

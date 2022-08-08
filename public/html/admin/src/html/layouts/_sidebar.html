@@ -1,0 +1,209 @@
+{% set prefix_theme = theme + '-' if theme %}
+<nav class="drawer  {{ drawerClass if drawerClass else 'drawer--dark' }}">
+  <div class="drawer-spacer">
+    <div class="media align-items-center">
+      <a href="index.html" class="drawer-brand-circle mr-2">H</a>
+      <div class="media-body">
+        <a href="index.html" class="h5 m-0 text-link">Hero Pro - Admin</a>
+      </div>
+    </div>
+  </div>
+  <!-- HEADING -->
+  <div class="py-2 drawer-heading">
+    Dashboards
+  </div>
+  <!-- DASHBOARDS MENU -->
+  <ul class="drawer-menu" id="dasboardMenu" data-children=".drawer-submenu">
+    <li class="drawer-menu-item {% if slug == 'index' %}active {% endif %}">
+      <a href="index.html">
+        <i class="material-icons">poll</i>
+        <span class="drawer-menu-text"> Financial</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item">
+      <a href="projects.html">
+        <i class="material-icons">dns</i>
+        <span class="drawer-menu-text"> Projects/Tickets</span>
+        <span class="badge badge-pill badge-success ml-1">4</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'retail' %}active {% endif %}">
+      <a href="retail.html">
+        <i class="material-icons">store</i>
+        <span class="drawer-menu-text"> E-Commerce</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'real-estate' %}active {% endif %}">
+      <a href="real-estate-grid.html">
+        <i class="material-icons">business</i>
+        <span class="drawer-menu-text"> Real Estate</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'profile' %}active {% endif %}">
+      <a href="profile.html">
+        <i class="material-icons">pages</i>
+        <span class="drawer-menu-text"> Social</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item {% if slug == 'analytics' %}active {% endif %}">
+      <a href="analytics.html">
+        <i class="material-icons">pie_chart</i>
+        <span class="drawer-menu-text"> Analytics</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- HEADING -->
+  <div class="py-2 drawer-heading">
+    Components
+  </div>
+
+  <!-- COMPONENTS MENU -->
+  <ul class="drawer-menu" id="componentsMenu" data-children=".drawer-submenu">
+    <li class="drawer-menu-item drawer-submenu">
+      <a data-toggle="collapse" data-parent="#componentsMenu" href="#" data-target="#uiComponentsMenu" aria-controls="uiComponentsMenu" {% if category == 'ui' %} aria-expanded="true"  {% else %}  aria-expanded="false"  class="collapsed"{% endif %}>
+        <i class="material-icons">library_books</i>
+        <span class="drawer-menu-text"> UI Components</span>
+      </a>
+      <ul class="collapse {% if category == 'ui' %}show {% endif %}" id="uiComponentsMenu">
+        <li class="drawer-menu-item {% if slug == 'ui-buttons' %}active {% endif %}"><a href="{{ prefix_theme }}ui-buttons.html">Buttons</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-colors' %}active {% endif %}"><a href="{{ prefix_theme }}ui-colors.html">Colors</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-grid' %}active {% endif %}"><a href="{{ prefix_theme }}ui-grid.html">Grid</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-icons' %}active {% endif %}"><a href="{{ prefix_theme }}ui-icons.html">Icons</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-typography' %}active {% endif %}"><a href="{{ prefix_theme }}ui-typography.html">Typography</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-drag-drop' %}active {% endif %}"><a href="{{ prefix_theme }}ui-drag-drop.html">Drag &amp; Drop</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-loaders' %}active {% endif %}"><a href="{{ prefix_theme }}ui-loaders.html">Loaders</a></li>
+      </ul>
+    </li>
+
+
+    <li class="drawer-menu-item drawer-submenu">
+      <a data-toggle="collapse" data-parent="#componentsMenu" href="#" data-target="#formsMenu" aria-controls="formsMenu" {% if category == 'forms' %} aria-expanded="true"  {% else %}  aria-expanded="false"  class="collapsed"{% endif %}>
+        <i class="material-icons">text_format</i>
+        <span class="drawer-menu-text"> Forms</span>
+      </a>
+      <ul class="collapse {% if category == 'forms' %}show {% endif %}" id="formsMenu">
+        <li class="drawer-menu-item {% if slug == 'form-controls' %}active {% endif %}"><a href="{{ prefix_theme }}form-controls.html">Form Controls</a></li>
+        <li class="drawer-menu-item {% if slug == 'checkboxes-radios' %}active {% endif %}"><a href="{{ prefix_theme }}checkboxes-radios.html">Checkboxes &amp; Radios</a></li>
+        <li class="drawer-menu-item {% if slug == 'switches-toggles' %}active {% endif %}"><a href="{{ prefix_theme }}switches-toggles.html">Switches &amp; Toggles</a></li>
+        <li class="drawer-menu-item {% if slug == 'form-layout' %}active {% endif %}"><a href="{{ prefix_theme }}form-layout.html">Layout Variations</a></li>
+        <li class="drawer-menu-item {% if slug == 'validation' %}active {% endif %}"><a href="{{ prefix_theme }}validation.html">Validation</a></li>
+        <li class="drawer-menu-item {% if slug == 'custom-forms' %}active {% endif %}"><a href="{{ prefix_theme }}custom-forms.html">Custom Forms</a></li>
+        <li class="drawer-menu-item {% if slug == 'text-editor' %}active {% endif %}"><a href="{{ prefix_theme }}text-editor.html">Text Editor</a></li>
+        <li class="drawer-menu-item {% if slug == 'datepicker' %}active {% endif %}"><a href="{{ prefix_theme }}datepicker.html">Datepicker</a></li>
+      </ul>
+    </li>
+    <li class="drawer-menu-item  {% if category == 'tables' %}active {% endif %}">
+      <a href="ui-tables.html">
+        <i class="material-icons">tab</i>
+        <span class="drawer-menu-text"> Tables</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item  {% if category == 'notifications' %}active {% endif %}">
+      <a href="ui-notifications.html">
+        <i class="material-icons">notifications</i>
+        <span class="drawer-menu-text"> Notifications</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item  {% if category == 'charts' %}active {% endif %}">
+      <a href="charts.html">
+        <i class="material-icons">equalizer</i>
+        <span class="drawer-menu-text"> Charts</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item  {% if category == 'calendar' %}active {% endif %}">
+      <a href="events-calendar.html">
+        <i class="material-icons">event_available</i>
+        <span class="drawer-menu-text"> Calendar</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item  {% if category == 'maps' %}active {% endif %}">
+      <a href="maps.html">
+        <i class="material-icons">pin_drop</i>
+        <span class="drawer-menu-text"> Maps</span>
+      </a>
+    </li>
+  </ul>
+
+
+  <!-- HEADING -->
+  <div class="py-2 drawer-heading">
+    Pages
+  </div>
+
+  <!-- PAGES MENU -->
+  <ul class="drawer-menu" id="pagesMenu" data-children=".drawer-submenu">
+    <li class="drawer-menu-item">
+      <a href="user-list.html">
+        <i class="material-icons">list</i>
+        <span class="drawer-menu-text">User List</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item">
+      <a href="search.html">
+        <i class="material-icons">search</i>
+        <span class="drawer-menu-text">Search</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item">
+      <a href="gallery.html">
+        <i class="material-icons">grid_on</i>
+        <span class="drawer-menu-text">Gallery</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item">
+      <a href="account.html">
+        <i class="material-icons">edit</i>
+        <span class="drawer-menu-text">Edit Account</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item">
+      <a href="login.html">
+        <i class="material-icons">lock</i>
+        <span class="drawer-menu-text">Login</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item">
+      <a href="signup.html">
+        <i class="material-icons">account_circle</i>
+        <span class="drawer-menu-text">Sign Up</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item">
+      <a href="forgot-password.html">
+        <i class="material-icons">help</i>
+        <span class="drawer-menu-text">Forgot Password</span>
+      </a>
+    </li>
+
+    <li class="drawer-menu-item drawer-submenu">
+      <a data-toggle="collapse" data-parent="#pagesMenu" href="#" data-target="#errorsMenu" aria-controls="errorsMenu" {% if category == 'error' %} aria-expanded="true"  {% else %}  aria-expanded="false"  class="collapsed"{% endif %}>
+        <i class="material-icons">error</i>
+        <span class="drawer-menu-text"> Error</span>
+      </a>
+      <ul class="collapse {% if category == 'error' %}show {% endif %}" id="errorsMenu">
+        <li class="drawer-menu-item {% if slug == 'error-403' %}active {% endif %}"><a href="{{ prefix_theme }}error-403.html">Error 403</a></li>
+        <li class="drawer-menu-item {% if slug == 'error-404' %}active {% endif %}"><a href="{{ prefix_theme }}error-404.html">Error 404</a></li>
+        <li class="drawer-menu-item {% if slug == 'error-500' %}active {% endif %}"><a href="{{ prefix_theme }}error-500.html">Error 500</a></li>
+        <li class="drawer-menu-item {% if slug == 'error-503' %}active {% endif %}"><a href="{{ prefix_theme }}error-503.html">Error 503</a></li>
+      </ul>
+    </li>
+
+    <li class="drawer-menu-item drawer-submenu">
+      <a data-toggle="collapse" data-parent="#pagesMenu" href="#" data-target="#extrasMenu" aria-controls="extrasMenu" {% if category == 'extra' %} aria-expanded="true"  {% else %}  aria-expanded="false"  class="collapsed"{% endif %}>
+        <i class="material-icons">more</i>
+        <span class="drawer-menu-text"> Extra</span>
+      </a>
+      <ul class="collapse {% if category == 'extra' %}show {% endif %}" id="extrasMenu">
+        <li class="drawer-menu-item {% if slug == 'shopping-cart' %}active {% endif %}"><a href="{{ prefix_theme }}shopping-cart.html">Shopping cart</a></li>
+        <li class="drawer-menu-item {% if slug == 'product' %}active {% endif %}"><a href="{{ prefix_theme }}product.html">Product</a></li>
+        <li class="drawer-menu-item {% if slug == 'property' %}active {% endif %}"><a href="{{ prefix_theme }}property.html">Property</a></li>
+        <li class="drawer-menu-item {% if slug == 'project' %}active {% endif %}"><a href="{{ prefix_theme }}project.html">Project</a></li>
+        <li class="drawer-menu-item {% if slug == 'project-tasks' %}active {% endif %}"><a href="{{ prefix_theme }}project-tasks.html">Project tasks</a></li>
+        <li class="drawer-menu-item {% if slug == 'coming-soon' %}active {% endif %}"><a href="{{ prefix_theme }}coming-soon.html">Coming soon</a></li>
+        <li class="drawer-menu-item {% if slug == 'maintenance' %}active {% endif %}"><a href="{{ prefix_theme }}maintenance.html">Maintenance</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</nav>

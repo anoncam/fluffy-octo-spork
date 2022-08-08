@@ -1,0 +1,29 @@
+.real-estate-header {
+	margin-bottom: $spacer;
+	.d-flex {
+		align-items: center;
+		span {
+			margin-right: .325rem;
+		}
+		.custom-select {
+			margin-right: .625rem;
+			width: 150px;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.real-estate-header {
+		.d-flex {
+			small {
+				margin-left: auto;
+			}
+		}
+		.custom-select {
+			margin-right: 0;
+		}
+		.col-md-8 {
+			margin-bottom: $spacer / 2;
+		}
+	}
+}

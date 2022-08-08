@@ -1,0 +1,23 @@
+---
+title: Hero
+slug: text-editor
+category: forms
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Text Editor'
+---
+{% extends "./layouts/rtl-default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-summernote.rtl.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+  <script src="assets/vendor/summernote-bs4.min.js"></script>
+
+  <script>
+    $('.text-editor').summernote({
+      height: '200',
+      disableResizeEditor: true
+    });
+  </script>
+{% endblock %}

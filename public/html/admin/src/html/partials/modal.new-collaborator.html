@@ -1,0 +1,45 @@
+<div class="modal fade" id="newCollaboratorModal" tabindex="-1" role="dialog" aria-labelledby="newCollaboratorModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newCollaboratorModalLabel">Add a new collaborator</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="form-group">
+            <label for="collaborator" class="mr-1">Name</label>
+            <select class="custom-select form-control" id="collaborator">
+              <option selected>None</option>
+              <option value="1">Mark Ups</option>
+              <option value="2">Karen Smith</option>
+              <option value="3">Tara Knows</option>
+              <option value="3">John Mix</option>
+              <option value="3">Steven Young</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Role</label>
+            <div class="btn-group-toggle" data-toggle="buttons" id="role">
+              <label class="btn btn-primary active">
+                <input type="checkbox" checked> Manager
+              </label>
+              <label class="btn btn-primary">
+                <input type="checkbox"> Back-End
+              </label>
+              <label class="btn btn-primary">
+                <input type="checkbox"> Front-End
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add collaborator</button>
+      </div>
+    </div>
+  </div>
+</div>

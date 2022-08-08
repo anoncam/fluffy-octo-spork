@@ -1,0 +1,8 @@
+.badge.badge-tag {
+  background-color: theme-color('body-bg');
+  font-weight: normal;
+  i {
+    cursor: pointer;
+    color: theme-color('danger')
+  }
+}

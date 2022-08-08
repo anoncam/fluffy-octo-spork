@@ -1,0 +1,20 @@
+---
+title: Hero
+slug: switches-toggles
+category: forms
+pageTitle: 'Switches & Toggles'
+---
+{% extends "./layouts/rtl-default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-bootstrap-switch.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/vendor-bootstrap-switch.rtl.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+  <script src="assets/vendor/bootstrap-switch.min.js"></script>
+
+  <script>
+    $("input[name='bootstrap-switch']").bootstrapSwitch();
+  </script>
+{% endblock %}

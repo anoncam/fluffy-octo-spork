@@ -1,0 +1,180 @@
+<div class="container-fluid">
+  <div class="row align-items-center mb-3">
+    <div class="col-md-6">
+      <h1 class="h2 mb-0">Retail Dashboard</h1>
+      <ol class="breadcrumb p-0">
+        <li>
+          <a href="#">Dashboards</a>
+        </li>
+        <li class="text-muted">
+          Retail
+        </li>
+      </ol>
+    </div>
+    <div class="col-md-6">
+      <div class="d-md-flex new-order">
+        <select class="custom-select mr-2">
+          <option selected>Los Angeles Store</option>
+          <option value="1">San Francisco Store</option>
+          <option value="2">Seattle Store</option>
+          <option value="3">Washington Store</option>
+        </select>
+        <div class="input-group mr-2">
+          <div class="input-group-prepend prev-date">
+            <span class="input-group-text">
+              <i class="material-icons md-18 align-middle">chevron_left</i>
+            </span>
+          </div>
+          <input type="text" class="datepicker-retail form-control">
+          <div class="input-group-append next-date">
+            <span class="input-group-text">
+              <i class="material-icons md-18 align-middle">chevron_right</i>
+            </span>
+          </div>
+        </div>
+        <a href="purchase-order.html" class="btn btn btn-success">
+          <i class="material-icons md-18 align-middle">shopping_cart</i>
+          <span class="align-middle">New Order</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header d-flex align-items-center justify-content-between">
+          <h4 class="card-title">Revenue</h4>
+          <div>
+            <a href="#" class="btn btn-sm btn-white mr-1">
+              <i class="material-icons md-18 align-middle">import_export</i>
+              <small class="align-middle text-uppercase">Export</small>
+            </a>
+            <a href="#" class="btn btn-sm btn-white">
+              <i class="material-icons md-18 align-middle">print</i>
+              <small class="align-middle text-uppercase">Print</small>
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="media align-items-center mb-3">
+            <i class="material-icons md-36 text-success mr-2">keyboard_arrow_up</i>
+            <div class="media-body">
+              <div class="d-flex align-items-center">
+                <span>&dollar;</span>
+                <h4 class="mb-0">108,350.00</h4>
+              </div>
+              <div class="text-success">
+                +8.3% since last month
+              </div>
+            </div>
+          </div>
+          <div class="w-100">
+            <canvas id="retail-revenue-chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header d-flex align-items-center justify-content-between">
+          <h4 class="card-title">Sales</h4>
+          <div>
+            <a href="#" class="btn btn-sm btn-white mr-1">
+              <i class="material-icons md-18 align-middle">import_export</i>
+              <small class="align-middle text-uppercase">Export</small>
+            </a>
+            <a href="#" class="btn btn-sm btn-white">
+              <i class="material-icons md-18 align-middle">print</i>
+              <small class="align-middle text-uppercase">Print</small>
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="media align-items-center mb-3">
+            <i class="material-icons md-36 text-danger mr-2">keyboard_arrow_down</i>
+            <div class="media-body">
+              <div class="d-flex align-items-center">
+                <span>&dollar;</span>
+                <h4 class="mb-0">29,165.50</h4>
+              </div>
+              <div class="text-danger">
+                -5.5% since last week
+              </div>
+            </div>
+          </div>
+          <div class="w-100">
+            <canvas id="retail-sales-chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="table-responsive">
+      <table class="table m-0">
+        <thead>
+          <tr class="bg-fade">
+            <th style="width: 80px;">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input check-sales" id="saleCheckAll">
+                <label class="custom-control-label align-middle" for="saleCheckAll"></label>
+              </div>
+            </th>
+            <th>Product</th>
+            <th>Revenue</th>
+            <th>Sold</th>
+            <th>Discount</th>
+            <th style="width: 150px;">Views</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for product in products %}
+          <tr>
+            <td class="align-middle">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input sale" id="saleCheck{{ loop.index }}">
+                <label class="custom-control-label align-middle" for="saleCheck{{ loop.index }}"></label>
+              </div>
+            </td>
+            <td class="align-middle">
+              <a href="product.html">{{ product.name }}</a>
+            </td>
+            <td class="align-middle">&dollar;{{ product.revenue }}</td>
+            <td class="align-middle">{{ product.sold }}</td>
+            <td class="align-middle">&dollar;{{ product.discount }}</td>
+            <td class="align-middle">
+              <div style="width: 300px; height: 50px;">
+                <canvas class="retail-views-mini-chart m-0"></canvas>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="card-body bg-fade">
+      <div class="d-flex align-items-center justify-content-center">
+        <nav aria-label="Page navigation" class="mr-3">
+          <ul class="pagination m-0">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="text-muted">1-10 of 200 items</div>
+      </div>
+    </div>
+  </div>
+</div>
