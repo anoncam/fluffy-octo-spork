@@ -59,7 +59,7 @@
     "lite-server": "^2.2.0",
     "object.values": "^1.0.4",
     "owl.carousel": "^2.3.4",
-    "surge": "^0.17.7",
+    "surge": "^0.23.1",
     "theme-mix": "0.4"
   }
 }
