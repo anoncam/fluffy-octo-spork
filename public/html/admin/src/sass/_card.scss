@@ -1,0 +1,126 @@
+.card {
+  &.card-login, &.card-signup, &.card-forgot-password {
+    width: 50%;
+  }
+  &.card-review {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.12);
+    margin-bottom: $spacer;
+  }
+}
+.card-header .card-title {
+  font-weight: 500;
+  font-size:15px;
+  margin-bottom:0;
+}
+
+.card-subtitle {
+  &.line-through {
+    border-bottom: 1px solid #DADADA;
+    line-height: .1em;
+    span {
+      background: #FFF;
+      padding: 0 10px;
+    }
+  }
+}
+
+.card {
+  margin-bottom: $spacer;
+}
+.card .card {
+  margin-bottom: 0;
+}
+
+.card.card-subtotals {
+  ul {
+    margin-bottom: 0;
+    li {
+      padding-bottom: .625rem;
+      margin-bottom: .625rem;
+      display: flex;
+      justify-content: space-between;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid theme-color('border-color');
+      }
+    }
+  }
+}
+
+.card.card-padded {
+  padding: 3rem 5rem;
+}
+
+.card-property {
+  border-radius: 0px 0px 5px 5px;
+  transition: ease all 0.2s;
+  &:hover {
+    box-shadow: 0 0 4px rgba(0,0,0, .15);
+    transform: scale(1.1);
+    img {
+      opacity: .84;
+    }
+    a {
+      color: theme-color('link-color') !important;
+      text-decoration: none;
+    }
+  }
+}
+
+a.social {
+  text-align: center;
+  svg {
+    height: 100%;
+  }
+  &.social-facebook {
+    fill: theme-color('facebook');
+    &:hover {
+      fill: darken(theme-color('facebook'), 10%);
+    }
+  }
+  &.social-twitter {
+    fill: theme-color('twitter');
+    &:hover {
+      fill: darken(theme-color('twitter'), 10%);
+    }
+  }
+  &.social-instagram {
+    fill: theme-color('instagram');
+    &:hover {
+      fill: darken(theme-color('instagram'), 10%);
+    }
+  }
+  &.social-dribbble {
+    fill: theme-color('dribbble');
+    &:hover {
+      fill: darken(theme-color('dribbble'), 10%);
+    }
+  }
+}
+
+.card-text {
+  line-height: $line-height-lg;
+}
+
+.card .card-body .device {
+  text-align: center;
+  &:first-of-type {
+    border-right: 1px solid theme-color('border-color');
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card .card-body .device {
+    text-align: center;
+    border: 0;
+  }
+  .card.card-profile--activity {
+    &:last-of-type {
+      margin-bottom: $spacer !important;
+    }
+  }
+  .card {
+    &.card-login, &.card-signup, &.card-forgot-password {
+      width: 100%;
+    }
+  }
+}

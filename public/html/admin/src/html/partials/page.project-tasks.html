@@ -1,0 +1,207 @@
+<div class="container-fluid">
+  <div class="row align-items-center mb-3">
+    <div class="col-md-8">
+      <h1 class="h2 mb-0">Manage Project</h1>
+      <ol class="breadcrumb p-0">
+        <li>
+          <a href="#">Dashboards</a>
+        </li>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+        <li class="text-muted">
+          Project
+        </li>
+      </ol>
+    </div>
+    <div class="col-md-4 text-lg-right">
+      <div class="form-group m-0">
+        <div class="input-group input-group--inline">
+          <div class="input-group-addon">
+            <i class="material-icons">search</i>
+          </div>
+          <input class="form-control" name="search" placeholder="Search task, user..." type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <div class="d-flex align-items-center justify-content-between">
+        <h4 class="card-title">
+          Task Manager
+        </h4>
+        <a href="#" class="btn btn-sm btn-white">
+          <i class="material-icons md-18 align-middle">import_export</i>
+          <small class="align-middle text-uppercase">Export</small>
+        </a>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table m-0">
+        <thead>
+          <tr class="bg-fade">
+            <th style="width: 80px;">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input check-sales" id="saleCheck1">
+                <label class="custom-control-label align-middle" for="saleCheck1"></label>
+              </div>
+            </th>
+            <th>ID</th>
+            <th>Task</th>
+            <th>Priority</th>
+            <th>Progress</th>
+            <th class="text-center">Watchers</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bg-fade" colspan="7">
+              <strong>Bugs</strong>
+            </td>
+          </tr>
+          {% for task in bugs %}
+          <tr>
+            <td class="align-middle">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input sale" id="saleCheck{{ loop.index }}">
+                <label class="custom-control-label align-middle" for="saleCheck{{ loop.index }}"></label>
+              </div>
+            </td>
+            <td class="align-middle">
+              <a href="#">{{ task.id }}</a>
+            </td>
+            <td class="align-middle">
+              <div class="media">
+                <div class="media-body">
+                  <div>{{ task.name }}</div>
+                  <div class="text-muted">
+                    {{ task.description }}
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="align-middle">{{ task.priority|safe }}</td>
+            <td class="align-middle">{{ task.progress|safe }}</td>
+            <td class="align-middle text-center">
+              <img src="{{ task.user_image }}" alt="{{ task.user }}" class="rounded-circle" width="35">
+            </td>
+            <td class="align-middle text-center">
+              <div class="dropdown show">
+                <a class="btn btn-white btn-sm" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons md-18 align-middle">more_vert</i>
+                </a>
+
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">
+                    <i class="material-icons md-14 align-middle">edit</i>
+                    <span class="align-middle">Edit</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="material-icons md-14 align-middle">content_copy</i>
+                    <span class="align-middle">Duplicate</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="material-icons md-14 align-middle">favorite_border</i>
+                    <span class="align-middle">Mark as favourite</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#">
+                    <i class="material-icons md-14 align-middle">delete</i>
+                    <span class="align-middle">Delete</span>
+                  </a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+          <tr>
+            <td class="bg-fade" colspan="7">
+              <strong>Milestone 1.0.0</strong>
+            </td>
+          </tr>
+          {% for task in milestone %}
+          <tr>
+            <td class="align-middle">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input sale" id="saleCheck{{ loop.index }}">
+                <label class="custom-control-label align-middle" for="saleCheck{{ loop.index }}"></label>
+              </div>
+            </td>
+            <td class="align-middle">
+              <a href="#">{{ task.id }}</a>
+            </td>
+            <td class="align-middle">
+              <div class="media">
+                <div class="media-body">
+                  <div>{{ task.name }}</div>
+                  <div class="text-muted">
+                    {{ task.description }}
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td class="align-middle">{{ task.priority|safe }}</td>
+            <td class="align-middle">{{ task.progress|safe }}</td>
+            <td class="align-middle text-center">
+              <img src="{{ task.user_image }}" alt="{{ task.user }}" class="rounded-circle" width="35">
+            </td>
+            <td class="align-middle text-center">
+              <div class="dropdown show">
+                <a class="btn btn-white btn-sm" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons md-18 align-middle">more_vert</i>
+                </a>
+
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">
+                    <i class="material-icons md-14 align-middle">edit</i>
+                    <span class="align-middle">Edit</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="material-icons md-14 align-middle">content_copy</i>
+                    <span class="align-middle">Duplicate</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="material-icons md-14 align-middle">favorite_border</i>
+                    <span class="align-middle">Mark as favourite</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#">
+                    <i class="material-icons md-14 align-middle">delete</i>
+                    <span class="align-middle">Delete</span>
+                  </a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="card-body bg-fade">
+      <div class="d-flex align-items-center justify-content-center">
+        <nav aria-label="Page navigation" class="mr-3">
+          <ul class="pagination m-0">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="text-muted">1-10 of 200 tasks</div>
+      </div>
+    </div>
+  </div>
+</div>

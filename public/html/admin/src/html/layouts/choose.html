@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ title }}</title>
+
+  {% block head %}{% endblock %}
+  {% include 'layouts/_header.html' %}
+</head>
+<body>
+  <div class="fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <div class="media align-items-center">
+          <a href="index.html" class="drawer-brand-circle mr-2">H</a>
+          <div class="media-body">
+            <a href="index.html" class="page-title m-0">Hero PRO</a>
+          </div>
+        </div>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ml-auto d-flex align-items-center">
+          <li class="nav-item nav-link pr-0">
+            <a class="btn btn-white" href="index.html">
+              View Demo
+            </a>
+          </li>
+          <li class="nav-item pl-0">
+            <a class=" nav-link" href="https://themeforest.net/item/hero-pro-bootstrap-4-admin-dashboard-theme/21525206?ref=frontted" target="_blank">
+              <i class="material-icons align-middle md-18">shopping_cart</i>
+              Purchase $24
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- main content -->
+  <div class="top-navbar">
+    <div class="bg-primary mb-4">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="assets/images/preview_hero_choose.png" alt="bootstrap 4 admin" class="img-fluid">
+          </div>
+          <div class="col-md-6 p-5 text-white">
+            <div class="pb-3">
+              <h1 class="display-3 mb-0"><strong>Hero PRO</strong></h1>
+              <p class="lead">An Admin for Business Professionals</p>
+            </div>
+            <a href="index.html" class="btn btn-lg btn-white">Live Preview <i class="material-icons align-middle">arrow_forward</i></a> <a href="rtl-index.html" class="btn btn-lg btn-primary-dark ml-2">RTL Preview</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     {% block page %}
+      {% include 'partials/page.' + slug + '.html' ignore missing %}
+    {% endblock %}
+
+    <hr>
+    <div class="text-center pb-1">
+        <p>Created by <a href="https://www.frontted.com" class="text-muted" target="_blank"><img class="ProfileAvatar-image" src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" alt="Frontted" width="30"> <strong>Frontted.com</strong></a></p>
+    </div>
+  </div>
+
+
+  <!-- jQuery -->
+  <script src="assets/vendor/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="assets/vendor/popper.js"></script>
+  <script src="assets/vendor/bootstrap.min.js"></script>
+
+  <!-- Placeholder JS -->
+  <script src="assets/vendor/placeholder.min.js"></script>
+
+  <!-- APP -->
+  <script src="assets/js/color_variables.js"></script>
+  <script src="assets/js/app.js"></script>
+
+
+  <script src="assets/vendor/dom-factory.js"></script> <!-- DOM Factory -->
+  <script src="assets/vendor/material-design-kit.js"></script> <!-- MDK -->
+
+  {% block scripts %}{% endblock %}
+
+</body>
+</html>

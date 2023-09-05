@@ -1,0 +1,28 @@
+@include media-breakpoint-up(sm) {
+  .row.row-projects {
+    .col-lg-3, .col-md-4 {
+      text-align: center;
+      &:not(:last-of-type) {
+        border-right: 1px solid theme-color('border-color');
+      }
+      .material-icons {
+        height: 60px;
+        line-height:60px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .row.row-projects {
+    .col-6 {
+      text-align: center;
+      &:nth-child(odd) {
+        border-right: 1px solid theme-color('border-color');
+      }
+      &:first-of-type {
+        margin-bottom: $spacer;
+      }
+    }
+  }
+}

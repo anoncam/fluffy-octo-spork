@@ -1,0 +1,253 @@
+<div class="container-fluid container--wide">
+  <div class="row align-items-center mb-3">
+    <div class="col-md-8">
+      <h1 class="h2 mb-0">New Order</h1>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#">Dashboard</a>
+        </li>
+        <li>
+          <a href="#">Purchase Orders</a>
+        </li>
+        <li>
+          <a href="#">New Order</a>
+        </li>
+      </ol>
+    </div>
+    <div class="col-md-4 text-md-right">
+      <button class="btn btn-white">
+        <i class="material-icons md-18 align-middle">chevron_left</i>
+        <span class="align-middle">Back</span>
+      </button>
+    </div>
+  </div>
+  <div class="card card-body card-padded">
+    <h1 class="h4 mb-0">1. Supplier</h1>
+    <hr>
+    <form action="#" class="mb-3">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="supplier">Select a supplier</label>
+            <select class="select-2">
+              <option selected>Los Angeles Store</option>
+              <option value="1">San Francisco Store</option>
+              <option value="2">Seattle Store</option>
+              <option value="3">Washington Store</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="supplier">Ship to location</label>
+            <select class="select-2">
+              <option selected>Los Angeles Store</option>
+              <option value="1">San Francisco Store</option>
+              <option value="2">Seattle Store</option>
+              <option value="3">Washington Store</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </form>
+    <h1 class="h4 mb-0">2. Order Dates</h1>
+    <hr>
+    <div class="row mb-3">
+      <div class="col">
+        <div class="form-group">
+          <label for="order_created">Order Created</label>
+          <input type="text" id="order_created" class="datepicker-disabled form-control" disabled>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="order_expected">Order Created</label>
+          <input type="text" id="order_expected" class="datepicker-new-order form-control">
+        </div>
+      </div>
+    </div>
+    <h1 class="h4 mb-0">3. Order Items</h1>
+    <hr>
+    <table class="table mb-3">
+      <thead>
+        <tr>
+          <th>
+            Product
+          </th>
+          <th>Ref Code</th>
+          <th>Quantity</th>
+          <th>Item Price</th>
+          <th>Total Price</th>
+          <th class="text-right">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="align-middle">
+            iPhone 8 Plus
+          </td>
+          <td class="align-middle">#1992993</td>
+          <td class="align-middle">3</td>
+          <td class="align-middle">&dollar;999.00</td>
+          <td class="align-middle">&dollar;2997.00</td>
+          <td class="align-middle text-right">
+            <button class="btn btn-white btn-sm " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+              <i class="material-icons md-14 align-middle">edit</i>
+            </button>
+            <button class="btn btn-danger btn-sm " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Delete">
+              <i class="material-icons md-14 align-middle">delete</i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="align-middle">
+            MacBook Pro
+          </td>
+          <td class="align-middle">#2991083</td>
+          <td class="align-middle">1</td>
+          <td class="align-middle">&dollar;2400.00</td>
+          <td class="align-middle">&dollar;2400.00</td>
+          <td class="align-middle text-right">
+            <button class="btn btn-white btn-sm " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+              <i class="material-icons md-14 align-middle">edit</i>
+            </button>
+            <button class="btn btn-danger btn-sm " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Delete">
+              <i class="material-icons md-14 align-middle">delete</i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="align-middle">
+            iPhone 6s Plus
+          </td>
+          <td class="align-middle">#1992995</td>
+          <td class="align-middle">2</td>
+          <td class="align-middle">&dollar;650.00</td>
+          <td class="align-middle">&dollar;1300.00</td>
+          <td class="align-middle text-right">
+            <button class="btn btn-white btn-sm " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+              <i class="material-icons md-14 align-middle">edit</i>
+            </button>
+            <button class="btn btn-danger btn-sm " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Delete">
+              <i class="material-icons md-14 align-middle">delete</i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="align-middle">
+            MacBook Air
+          </td>
+          <td class="align-middle">#2991085</td>
+          <td class="align-middle">2</td>
+          <td class="align-middle">&dollar;1400.00</td>
+          <td class="align-middle">&dollar;2800.00</td>
+          <td class="align-middle text-right">
+            <button class="btn btn-white btn-sm " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Edit">
+              <i class="material-icons md-14 align-middle">edit</i>
+            </button>
+            <button class="btn btn-danger btn-sm " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Delete">
+              <i class="material-icons md-14 align-middle">delete</i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="note">Note</label>
+          <textarea name="note" id="note" cols="30" rows="7" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="tages">Tags</label>
+          <div class="d-flex justify-content-between mb-1">
+            <input type="text" id="tags" class="form-control mr-3">
+            <button class="btn btn-success">
+              <i class="material-icons md-18 align-middle">add_circle_outline</i>
+              <span class="align-middle">Add Tag</span>
+            </button>
+          </div>
+          <div class="badge badge-tag">
+            <span class="align-middle">Mobile</span>
+            <i class="material-icons md-10 align-middle">close</i>
+          </div>
+          <div class="badge badge-tag">
+            <span class="align-middle">Apple</span>
+            <i class="material-icons md-10 align-middle">close</i>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Add previously used tags</label>
+          <div class="d-flex">
+            <div class="badge badge-tag">
+              <span class="align-middle">Mobile</span>
+              <i class="material-icons md-10 align-middle">close</i>
+            </div>
+            <div class="badge badge-tag">
+              <span class="align-middle">Apple</span>
+              <i class="material-icons md-10 align-middle">close</i>
+            </div>
+            <div class="badge badge-tag">
+              <span class="align-middle">Laptop</span>
+              <i class="material-icons md-10 align-middle">close</i>
+            </div>
+            <div class="badge badge-tag">
+              <span class="align-middle">macOS</span>
+              <i class="material-icons md-10 align-middle">close</i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col">
+            <div class="card card-body bg-light mb-3">
+              <div class="text-muted">Vendor owes</div>
+              <div>&dollar;50.00</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-body bg-light mb-3">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <div class="text-muted">In Credit</div>
+                  <div>&dollar;20.00</div>
+                </div>
+                <i class="material-icons md-18">add_circle_outline</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-body card-subtotals bg-light">
+          <ul class="list-unstyled">
+            <li>
+              <div>Units Ordered</div>
+              <div>8</div>
+            </li>
+            <li>
+              <div>Units Received</div>
+              <div>0</div>
+            </li>
+            <li>
+              <div>Subtotal</div>
+              <div>&dollar;9497.00</div>
+            </li>
+            <li>
+              <div>Tax</div>
+              <div>&dollar;0.00</div>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <div>Shipping &amp; Handling</div>
+            <input type="text" class="form-control input-sm" value="55.00">
+          </div>
+          <hr>
+          <div class="d-flex align-items-center justify-content-between">
+            <strong>Total:</strong>
+            <strong>&dollar;9552</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

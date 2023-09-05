@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hero</title>
+
+
+    <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
+
+    <!-- Simplebar -->
+    <link type="text/css" href="assets/vendor/simplebar.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-fullbleed data-push data-responsive-width="992px" data-has-scrolling-region>
+
+        <div class="mdk-drawer-layout__content">
+            <!-- header-layout -->
+            <div class="mdk-header-layout js-mdk-header-layout  mdk-header--fixed  mdk-header-layout__content--scrollable">
+                <!-- header -->
+                <div class="mdk-header js-mdk-header bg-primary" data-fixed>
+                    <div class="mdk-header__content">
+
+                        <nav class="navbar navbar-expand-md navbar-dark bg-primary d-flex-none">
+                            <button class="btn btn-link text-white pl-0" type="button" data-toggle="sidebar">
+    <i class="material-icons align-middle md-36">short_text</i>
+  </button>
+                            <div class="page-title m-0">Project</div>
+
+                            <div class="collapse navbar-collapse" id="mainNavbar">
+                                <ul class="navbar-nav ml-auto align-items-center">
+                                    <li class="nav-item nav-link">
+                                        <div class="form-group m-0">
+                                            <div class="input-group input-group--inline">
+                                                <div class="input-group-addon">
+                                                    <i class="material-icons">search</i>
+                                                </div>
+                                                <input type="text" class="form-control" name="search" placeholder="Search app..">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown nav-language d-flex align-items-center">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          EN
+        </a>
+                                        <div class="dropdown-menu dropdown-menu-right ">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="account.html" class="dropdown-item active">
+                <img src="http://flags.fmcdn.net/data/flags/w1160/us.png" style="width: 25px; vertical-align: middle" alt="English"> English
+              </a>
+                                                </li>
+                                                <li>
+                                                    <a href="account.html" class="dropdown-item">
+                <img src="http://flags.fmcdn.net/data/flags/w1160/fr.png" style="width: 25px; vertical-align: middle" alt="French"> French
+              </a>
+                                                </li>
+                                                <li>
+                                                    <a href="account.html" class="dropdown-item">
+                <img src="http://flags.fmcdn.net/data/flags/w1160/de.png" style="width: 25px; vertical-align: middle" alt="English"> German
+              </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown notifications d-flex align-self-center align-items-center" id="navbarNotifications">
+                                        <a href="#" class="nav-link dropdown-toggle notifications--active" data-toggle="dropdown" aria-expanded="false">
+          <i class="material-icons align-middle">notifications</i>
+        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown" id="notificationsDropdown">
+                                            <ul class="nav nav-tabs-notifications" id="notifications-ul" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="true">Notifications</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="alerts-tab" data-toggle="tab" href="#alerts" role="tab" aria-controls="alerts" aria-selected="false">Alerts</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="notifications-tabs">
+                                                <div class="tab-pane fade show active" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">
+                                                            <div class="w-100">
+                                                                <a href="#">john</a> received a new quote</div>
+                                                            <div class="w-100 text-muted">4 secs ago</div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="w-100">
+                                                                <a href="#">karen</a> received a new quote</div>
+                                                            <div class="w-100 text-muted">25 mins ago</div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="w-100">
+                                                                <a href="#">jim</a> received a new quote</div>
+                                                            <div class="w-100 text-muted">7 hrs ago</div>
+                                                        </li>
+                                                        <li class="list-group-item text-right">
+                                                            <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle">arrow_forward</i>
+                  </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" id="alerts" role="tabpanel" aria-labelledby="alerts-tab">
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <i class="material-icons align-middle mr-2 text-warning">
+                      info_outline
+                    </i>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">
+                                                                        <a href="profile.html">john</a> received a new
+                                                                        <a href="#">quote</a>
+                                                                    </div>
+                                                                    <div class="w-100 text-muted">4 secs ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <i class="material-icons align-middle mr-2 text-success">
+                      check_circle
+                    </i>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">
+                                                                        <a href="profile.html">karen</a> completed a
+                                                                        <a href="#">task</a>
+                                                                    </div>
+                                                                    <div class="w-100 text-muted">25 mins ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <i class="material-icons align-middle mr-2 text-danger">
+                      warning
+                    </i>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">
+                                                                        <a href="profile.html">jim</a> removed a
+                                                                        <a href="#">task</a>
+                                                                    </div>
+                                                                    <div class="w-100 text-muted">7 hrs ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item text-right">
+                                                            <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle">arrow_forward</i>
+                  </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <a href="profile.html">
+                      <img src="assets/images/avatars/person-1.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                    </a>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">I started that project we talked...</div>
+                                                                    <div class="w-100 text-muted">4 secs ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <a href="profile.html">
+                      <img src="assets/images/avatars/person-11.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                    </a>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">Can we arrange a meeting?...</div>
+                                                                    <div class="w-100 text-muted">25 mins ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <a href="profile.html">
+                      <img src="assets/images/avatars/person-12.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                    </a>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">We need to fix some bugs...</div>
+                                                                    <div class="w-100 text-muted">7 hrs ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item text-right">
+                                                            <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle">arrow_forward</i>
+                  </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item nav-divider">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link dropdown-toggle dropdown-clear-caret" data-toggle="sidebar" data-target="#user-drawer">
+          Frontted
+          <img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="img-fluid rounded-circle ml-1" width="35"
+            alt="">
+        </a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- content -->
+                <div class="mdk-header-layout__content top-navbar mdk-header-layout__content--scrollable h-100">
+                    <!-- main content -->
+                    <div class="container-fluid">
+                        <div class="row align-items-center mb-3">
+                            <div class="col-md-8">
+                                <h1 class="h2 mb-0">Manage Project</h1>
+                                <ol class="breadcrumb p-0">
+                                    <li>
+                                        <a href="#">Dashboards</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects.html">Projects</a>
+                                    </li>
+                                    <li class="text-muted">
+                                        Project
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4 text-lg-right">
+                                <div class="form-group m-0">
+                                    <div class="input-group input-group--inline">
+                                        <div class="input-group-addon">
+                                            <i class="material-icons">search</i>
+                                        </div>
+                                        <input class="form-control" name="search" placeholder="Search task, bug, issue, user..." type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-8">
+                                                <h4 class="card-title">
+                                                    E-Commerce Development
+                                                </h4>
+                                                <div class="text-muted">
+                                                    <span>Project Manager: Mark Ups</span> |
+                                                    <span>Start date: 18 Apr, 2018</span> |
+                                                    <span>Due date: 18 Nov, 2018</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 text-lg-right">
+                                                <a href="#" class="btn btn-sm btn-white mr-1">
+                <i class="material-icons md-18 align-middle">import_export</i>
+                <small class="align-middle text-uppercase">Export</small>
+              </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="doughnut-chart-wrapper">
+                                                    <div class="doughnut-chart-text">
+                                                        <div>
+                                                            <h3 class="text-danger">12</h3>
+                                                            <small>Bugs</small>
+                                                        </div>
+                                                    </div>
+                                                    <canvas class="doughnut-chart" data-percent="12"></canvas>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="doughnut-chart-wrapper">
+                                                    <div class="doughnut-chart-text">
+                                                        <div>
+                                                            <h3 class="text-warning">49</h3>
+                                                            <small>Issues</small>
+                                                        </div>
+                                                    </div>
+                                                    <canvas class="doughnut-chart" data-percent="49"></canvas>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="doughnut-chart-wrapper">
+                                                    <div class="doughnut-chart-text">
+                                                        <div>
+                                                            <h3 class="text-success">65</h3>
+                                                            <small>Fixes</small>
+                                                        </div>
+                                                    </div>
+                                                    <canvas class="doughnut-chart" data-percent="65"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-subtitle line-through text-muted text-center my-3">
+                                            <span>Project Status</span>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-lg-6">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span>Overall progress</span>
+                                                    <span class="text-primary">75%</span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-1">Bug fixing</div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-danger" style="width: 12%;" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-1">Issues fixing</div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-warning" style="width: 49%;" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-1">Tasks fixed</div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" style="width: 65%;" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h4 class="card-title">Collaborators</h4>
+                                            <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#newCollaboratorModal">
+              <i class="material-icons md-18 align-middle">add</i>
+              <span class="align-middle text-uppercase">Add new</span>
+            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item bg-fade">
+                                            <strong>Managers</strong>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media align-items-center">
+                                                <img src="assets/images/avatars/person-9.jpg" alt="Tara Knows" width="35" class="rounded-circle mr-2">
+                                                <div class="media-body">
+                                                    <div>
+                                                        <a href="profile.html">Tara Knows</a> active now
+                                                    </div>
+                                                    <div>
+
+                                                    </div>
+                                                    <div>
+                                                        Project Manager
+                                                    </div>
+                                                </div>
+                                                <a href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media align-items-center">
+                                                <img src="assets/images/avatars/person-3.jpg" alt="Steven Short" width="35" class="rounded-circle mr-2">
+                                                <div class="media-body">
+                                                    <div>
+                                                        <a href="profile.html">Steven Short</a> active 8m ago
+                                                    </div>
+                                                    <div>
+
+                                                    </div>
+                                                    <div>
+                                                        AGILE Manager
+                                                    </div>
+                                                </div>
+                                                <a href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item bg-fade">
+                                            <strong>Front-End</strong>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media align-items-center">
+                                                <img src="assets/images/avatars/person-1.jpg" alt="Andrew Robles" width="35" class="rounded-circle mr-2">
+                                                <div class="media-body">
+                                                    <div>
+                                                        <a href="profile.html">Andrew Robles</a> active now
+                                                    </div>
+                                                    <div>
+
+                                                    </div>
+                                                    <div>
+                                                        Front-End Developer
+                                                    </div>
+                                                </div>
+                                                <a href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media align-items-center">
+                                                <img src="assets/images/avatars/person-8.jpg" alt="Karen Smith" width="35" class="rounded-circle mr-2">
+                                                <div class="media-body">
+                                                    <div>
+                                                        <a href="profile.html">Karen Smith</a> active 46m ago
+                                                    </div>
+                                                    <div>
+
+                                                    </div>
+                                                    <div>
+                                                        UI / UX Designer
+                                                    </div>
+                                                </div>
+                                                <a href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media align-items-center">
+                                                <img src="assets/images/avatars/person-10.jpg" alt="John Smith" width="35" class="rounded-circle mr-2">
+                                                <div class="media-body">
+                                                    <div>
+                                                        <a href="profile.html">John Smith</a> active 4h ago
+                                                    </div>
+                                                    <div>
+
+                                                    </div>
+                                                    <div>
+                                                        Web Designer
+                                                    </div>
+                                                </div>
+                                                <a href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item bg-fade">
+                                            <strong>Back-End</strong>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media align-items-center">
+                                                <img src="assets/images/avatars/person-5.jpg" alt="Mark Ups" width="35" class="rounded-circle mr-2">
+                                                <div class="media-body">
+                                                    <div>
+                                                        <a href="profile.html">Mark Ups</a> active now
+                                                    </div>
+                                                    <div>
+
+                                                    </div>
+                                                    <div>
+                                                        Full Stack Developer
+                                                    </div>
+                                                </div>
+                                                <a href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media align-items-center">
+                                                <img src="assets/images/avatars/person-3.jpg" alt="Steven Short" width="35" class="rounded-circle mr-2">
+                                                <div class="media-body">
+                                                    <div>
+                                                        <a href="profile.html">Steven Short</a> active 8m ago
+                                                    </div>
+                                                    <div>
+
+                                                    </div>
+                                                    <div>
+                                                        Back-End Developer
+                                                    </div>
+                                                </div>
+                                                <a href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media align-items-center">
+                                                <img src="assets/images/avatars/person-8.jpg" alt="Karen Smith" width="35" class="rounded-circle mr-2">
+                                                <div class="media-body">
+                                                    <div>
+                                                        <a href="profile.html">Karen Smith</a> active 46m ago
+                                                    </div>
+                                                    <div>
+
+                                                    </div>
+                                                    <div>
+                                                        Back-End Developer
+                                                    </div>
+                                                </div>
+                                                <a href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="material-icons align-middle text-muted">more_horiz</i>
+              </a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-danger">block</i>
+                  <span class="align-middle">Block user</span>
+                </a>
+                                                    <a class="dropdown-item" href="#">
+                  <i class="material-icons md-18 align-middle text-primary">check</i>
+                  <span class="align-middle">Follow</span>
+                </a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h4 class="card-title">Latest tasks</h4>
+                                            <a href="#">
+              <i class="material-icons md-18 align-middle">sync</i>
+            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+
+                                        <li class="list-group-item">
+                                            <div class="media align-items-center">
+                                                <div class="text-muted mr-2">#31</div>
+                                                <div class="media-body">
+                                                    Review payment systems
+                                                </div>
+                                                <img src="assets/images/avatars/person-1.jpg" alt="Andrew Robles" class="rounded-circle" width="35">
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            <div class="media align-items-center">
+                                                <div class="text-muted mr-2">#26</div>
+                                                <div class="media-body">
+                                                    Create blog section on website
+                                                </div>
+                                                <img src="assets/images/avatars/person-3.jpg" alt="Steven Young" class="rounded-circle" width="35">
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            <div class="media align-items-center">
+                                                <div class="text-muted mr-2">#11</div>
+                                                <div class="media-body">
+                                                    Refactor user account sections
+                                                </div>
+                                                <img src="assets/images/avatars/person-9.jpg" alt="Tara Knows" class="rounded-circle" width="35">
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            <div class="media align-items-center">
+                                                <div class="text-muted mr-2">#10</div>
+                                                <div class="media-body">
+                                                    Fix server upload issues
+                                                </div>
+                                                <img src="assets/images/avatars/person-8.jpg" alt="Karen Smith" class="rounded-circle" width="35">
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            <div class="media align-items-center">
+                                                <div class="text-muted mr-2">#16</div>
+                                                <div class="media-body">
+                                                    Fix client upload issues
+                                                </div>
+                                                <img src="assets/images/avatars/person-8.jpg" alt="Karen Smith" class="rounded-circle" width="35">
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item text-center">
+                                            <a href="project-tasks.html">View All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Overview</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis maxime saepe magnam suscipit repellat aperiam quo, tempora libero praesentium. Eius porro expedita facere odio, praesentium laudantium culpa fuga temporibus deserunt!
+                                        </p>
+
+                                        <div id="accordion">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Collapsible Group Item #1
+                  </button>
+                                                    </h5>
+                                                </div>
+
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere vel eveniet doloribus suscipit laborum quibusdam reiciendis dolore, aliquid natus dolorem, autem accusamus incidunt esse, obcaecati quia accusantium? Corporis, eveniet, dolor!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingTwo">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Collapsible Group Item #2
+                  </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ad distinctio et ea amet qui omnis iste, facere id voluptatibus eveniet saepe quas numquam beatae inventore! Voluptatum provident deleniti adipisci.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Collapsible Group Item #3
+                  </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas in ut quisquam mollitia. Delectus ratione, asperiores aperiam, repellendus perspiciatis tempora recusandae est numquam libero fugit, et voluptate inventore. Iusto, nesciunt.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h4 class="card-title">Latest activity</h4>
+                                            <a href="#">
+              <i class="material-icons md-18 align-middle">sync</i>
+            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media">
+                                                <i class="material-icons md-18 align-middle text-success mr-2">check_circle</i>
+                                                <div class="media-body">
+                                                    <a href="profile.html">
+                  Andrew Robles
+                </a> completed task #21
+                                                </div>
+                                                <div class="text-muted">
+                                                    just now
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media">
+                                                <i class="material-icons md-18 align-middle text-warning mr-2">warning</i>
+                                                <div class="media-body">
+                                                    <a href="profile.html">
+                  Tara Knows
+                </a> added a new issue
+                                                </div>
+                                                <div class="text-muted">
+                                                    45 mins ago
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media">
+                                                <i class="material-icons md-18 align-middle text-success mr-2">check</i>
+                                                <div class="media-body">
+                                                    <a href="profile.html">
+                  Mark Ups
+                </a> fixed bug #8
+                                                </div>
+                                                <div class="text-muted">
+                                                    2 hrs ago
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media">
+                                                <i class="material-icons md-18 align-middle text-danger mr-2">error</i>
+                                                <div class="media-body">
+                                                    <a href="profile.html">
+                  Steven Short
+                </a> added a new bug
+                                                </div>
+                                                <div class="text-muted">
+                                                    5 hrs ago
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media">
+                                                <i class="material-icons md-18 align-middle text-success mr-2">check_circle</i>
+                                                <div class="media-body">
+                                                    <a href="profile.html">
+                  Karen Smith
+                </a> completed task #44
+                                                </div>
+                                                <div class="text-muted">
+                                                    16 hrs ago
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-group-item py-3">
+                                            <div class="media">
+                                                <i class="material-icons md-18 align-middle text-warning mr-2">warning</i>
+                                                <div class="media-body">
+                                                    <a href="profile.html">
+                  John Smith
+                </a> added a new issue
+                                                </div>
+                                                <div class="text-muted">
+                                                    2 days ago
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="mdk-drawer__inner" data-simplebar data-simplebar-force-enabled="true">
+
+                    <nav class="drawer  drawer--dark">
+                        <div class="drawer-spacer">
+                            <div class="media align-items-center">
+                                <a href="index.html" class="drawer-brand-circle mr-2">H</a>
+                                <div class="media-body">
+                                    <a href="index.html" class="h5 m-0 text-link">Hero Pro - Admin</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- HEADING -->
+                        <div class="py-2 drawer-heading">
+                            Dashboards
+                        </div>
+                        <!-- DASHBOARDS MENU -->
+                        <ul class="drawer-menu" id="dasboardMenu" data-children=".drawer-submenu">
+                            <li class="drawer-menu-item ">
+                                <a href="index.html">
+        <i class="material-icons">poll</i>
+        <span class="drawer-menu-text"> Financial</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="projects.html">
+        <i class="material-icons">dns</i>
+        <span class="drawer-menu-text"> Projects/Tickets</span>
+        <span class="badge badge-pill badge-success ml-1">4</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item ">
+                                <a href="retail.html">
+        <i class="material-icons">store</i>
+        <span class="drawer-menu-text"> E-Commerce</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item ">
+                                <a href="real-estate-grid.html">
+        <i class="material-icons">business</i>
+        <span class="drawer-menu-text"> Real Estate</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item ">
+                                <a href="profile.html">
+        <i class="material-icons">pages</i>
+        <span class="drawer-menu-text"> Social</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item ">
+                                <a href="analytics.html">
+        <i class="material-icons">pie_chart</i>
+        <span class="drawer-menu-text"> Analytics</span>
+      </a>
+                            </li>
+                        </ul>
+
+                        <!-- HEADING -->
+                        <div class="py-2 drawer-heading">
+                            Components
+                        </div>
+
+                        <!-- COMPONENTS MENU -->
+                        <ul class="drawer-menu" id="componentsMenu" data-children=".drawer-submenu">
+                            <li class="drawer-menu-item drawer-submenu">
+                                <a data-toggle="collapse" data-parent="#componentsMenu" href="#" data-target="#uiComponentsMenu" aria-controls="uiComponentsMenu" aria-expanded="false" class="collapsed">
+        <i class="material-icons">library_books</i>
+        <span class="drawer-menu-text"> UI Components</span>
+      </a>
+                                <ul class="collapse " id="uiComponentsMenu">
+                                    <li class="drawer-menu-item "><a href="ui-buttons.html">Buttons</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-colors.html">Colors</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-grid.html">Grid</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-icons.html">Icons</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-typography.html">Typography</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-drag-drop.html">Drag &amp; Drop</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-loaders.html">Loaders</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="drawer-menu-item drawer-submenu">
+                                <a data-toggle="collapse" data-parent="#componentsMenu" href="#" data-target="#formsMenu" aria-controls="formsMenu" aria-expanded="false" class="collapsed">
+        <i class="material-icons">text_format</i>
+        <span class="drawer-menu-text"> Forms</span>
+      </a>
+                                <ul class="collapse " id="formsMenu">
+                                    <li class="drawer-menu-item "><a href="form-controls.html">Form Controls</a></li>
+                                    <li class="drawer-menu-item "><a href="checkboxes-radios.html">Checkboxes &amp; Radios</a></li>
+                                    <li class="drawer-menu-item "><a href="switches-toggles.html">Switches &amp; Toggles</a></li>
+                                    <li class="drawer-menu-item "><a href="form-layout.html">Layout Variations</a></li>
+                                    <li class="drawer-menu-item "><a href="validation.html">Validation</a></li>
+                                    <li class="drawer-menu-item "><a href="custom-forms.html">Custom Forms</a></li>
+                                    <li class="drawer-menu-item "><a href="text-editor.html">Text Editor</a></li>
+                                    <li class="drawer-menu-item "><a href="datepicker.html">Datepicker</a></li>
+                                </ul>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="ui-tables.html">
+        <i class="material-icons">tab</i>
+        <span class="drawer-menu-text"> Tables</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="ui-notifications.html">
+        <i class="material-icons">notifications</i>
+        <span class="drawer-menu-text"> Notifications</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="charts.html">
+        <i class="material-icons">equalizer</i>
+        <span class="drawer-menu-text"> Charts</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="events-calendar.html">
+        <i class="material-icons">event_available</i>
+        <span class="drawer-menu-text"> Calendar</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="maps.html">
+        <i class="material-icons">pin_drop</i>
+        <span class="drawer-menu-text"> Maps</span>
+      </a>
+                            </li>
+                        </ul>
+
+
+                        <!-- HEADING -->
+                        <div class="py-2 drawer-heading">
+                            Pages
+                        </div>
+
+                        <!-- PAGES MENU -->
+                        <ul class="drawer-menu" id="pagesMenu" data-children=".drawer-submenu">
+                            <li class="drawer-menu-item">
+                                <a href="user-list.html">
+        <i class="material-icons">list</i>
+        <span class="drawer-menu-text">User List</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="search.html">
+        <i class="material-icons">search</i>
+        <span class="drawer-menu-text">Search</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="gallery.html">
+        <i class="material-icons">grid_on</i>
+        <span class="drawer-menu-text">Gallery</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="account.html">
+        <i class="material-icons">edit</i>
+        <span class="drawer-menu-text">Edit Account</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="login.html">
+        <i class="material-icons">lock</i>
+        <span class="drawer-menu-text">Login</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="signup.html">
+        <i class="material-icons">account_circle</i>
+        <span class="drawer-menu-text">Sign Up</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="forgot-password.html">
+        <i class="material-icons">help</i>
+        <span class="drawer-menu-text">Forgot Password</span>
+      </a>
+                            </li>
+
+                            <li class="drawer-menu-item drawer-submenu">
+                                <a data-toggle="collapse" data-parent="#pagesMenu" href="#" data-target="#errorsMenu" aria-controls="errorsMenu" aria-expanded="false" class="collapsed">
+        <i class="material-icons">error</i>
+        <span class="drawer-menu-text"> Error</span>
+      </a>
+                                <ul class="collapse " id="errorsMenu">
+                                    <li class="drawer-menu-item "><a href="error-403.html">Error 403</a></li>
+                                    <li class="drawer-menu-item "><a href="error-404.html">Error 404</a></li>
+                                    <li class="drawer-menu-item "><a href="error-500.html">Error 500</a></li>
+                                    <li class="drawer-menu-item "><a href="error-503.html">Error 503</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="drawer-menu-item drawer-submenu">
+                                <a data-toggle="collapse" data-parent="#pagesMenu" href="#" data-target="#extrasMenu" aria-controls="extrasMenu" aria-expanded="true">
+        <i class="material-icons">more</i>
+        <span class="drawer-menu-text"> Extra</span>
+      </a>
+                                <ul class="collapse show " id="extrasMenu">
+                                    <li class="drawer-menu-item "><a href="shopping-cart.html">Shopping cart</a></li>
+                                    <li class="drawer-menu-item "><a href="product.html">Product</a></li>
+                                    <li class="drawer-menu-item "><a href="property.html">Property</a></li>
+                                    <li class="drawer-menu-item active "><a href="project.html">Project</a></li>
+                                    <li class="drawer-menu-item "><a href="project-tasks.html">Project tasks</a></li>
+                                    <li class="drawer-menu-item "><a href="coming-soon.html">Coming soon</a></li>
+                                    <li class="drawer-menu-item "><a href="maintenance.html">Maintenance</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- // END drawer -->
+
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer" id="user-drawer" data-position="right" data-align="end">
+            <div class="mdk-drawer__content">
+                <div class="mdk-drawer__inner" data-simplebar data-simplebar-force-enabled="true">
+                    <nav class="drawer drawer--light">
+                        <div class="drawer-spacer drawer-spacer-border">
+                            <div class="media align-items-center">
+                                <img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                                <div class="media-body">
+                                    <a href="#" class="h5 m-0">Frontted</a>
+                                    <div>Account Manager</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drawer-spacer bg-body-bg">
+                            <div class="d-flex justify-content-between mb-2">
+                                <p class="h6 text-gray m-0"><i class="material-icons align-middle md-18 text-primary">monetization_on</i> Balance</p>
+                                <span>$21,011</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class="h6 text-gray m-0"><i class="material-icons align-middle md-18 text-primary">shopping_cart</i> Sales</p>
+                                <span>142</span>
+                            </div>
+                        </div>
+                        <!-- MENU -->
+                        <ul class="drawer-menu" id="userMenu" data-children=".drawer-submenu">
+                            <li class="drawer-menu-item">
+                                <a href="account.html">
+        <i class="material-icons">lock</i>
+        <span class="drawer-menu-text"> Account</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="profile.html">
+        <i class="material-icons">account_circle</i>
+        <span class="drawer-menu-text"> Profile</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="login.html">
+        <i class="material-icons">exit_to_app</i>
+        <span class="drawer-menu-text"> Logout</span>
+      </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- // END drawer -->
+
+    </div>
+    <!-- // END drawer-layout -->
+
+
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Simplebar -->
+    <!-- Used for adding a custom scrollbar to the drawer -->
+    <script src="assets/vendor/simplebar.js"></script>
+
+
+    <!-- Vendor -->
+    <script src="assets/vendor/Chart.min.js"></script>
+    <script src="assets/vendor/moment.min.js"></script>
+
+
+    <!-- APP -->
+    <script src="assets/js/color_variables.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+    <script src="assets/vendor/dom-factory.js"></script>
+    <!-- DOM Factory -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+    <!-- MDK -->
+
+
+
+    <script>
+        (function() {
+            'use strict';
+            // Self Initialize DOM Factory Components
+            domFactory.handler.autoInit()
+
+
+            // Connect button(s) to drawer(s)
+            var sidebarToggle = document.querySelectorAll('[data-toggle="sidebar"]')
+
+            sidebarToggle.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    var selector = e.currentTarget.getAttribute('data-target') || '#default-drawer'
+                    var drawer = document.querySelector(selector)
+                    if (drawer) {
+                        if (selector == '#default-drawer') {
+                            $('.container-fluid').toggleClass('container--max');
+                        }
+                        drawer.mdkDrawer.toggle();
+                    }
+                })
+            })
+        })()
+    </script>
+
+
+    <script src="assets/js/charts_project.js"></script>
+    <div class="modal fade" id="newCollaboratorModal" tabindex="-1" role="dialog" aria-labelledby="newCollaboratorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newCollaboratorModalLabel">Add a new collaborator</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="collaborator" class="mr-1">Name</label>
+                            <select class="custom-select form-control" id="collaborator">
+              <option selected>None</option>
+              <option value="1">Mark Ups</option>
+              <option value="2">Karen Smith</option>
+              <option value="3">Tara Knows</option>
+              <option value="3">John Mix</option>
+              <option value="3">Steven Young</option>
+            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Role</label>
+                            <div class="btn-group-toggle" data-toggle="buttons" id="role">
+                                <label class="btn btn-primary active">
+                <input type="checkbox" checked> Manager
+              </label>
+                                <label class="btn btn-primary">
+                <input type="checkbox"> Back-End
+              </label>
+                                <label class="btn btn-primary">
+                <input type="checkbox"> Front-End
+              </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Add collaborator</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

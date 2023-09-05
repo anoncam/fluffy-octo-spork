@@ -1,0 +1,81 @@
+---
+title: Hero
+slug: projects
+category: projects
+navbarClass: bg-primary navbar-dark
+pageTitle: 'Projects Management'
+---
+{% extends "layouts/projects.html" %}
+
+{%
+  set projects = [
+    {
+      title: 'LTD Contract',
+      user: 'Karen Smith',
+      user_image: 'assets/images/avatars/person-13.jpg',
+      user_email: 'karen_smith@email.com',
+      company: 'LTD',
+      date: '21 Feb 2018',
+      status: 'active',
+      status_color: 'success'
+    },
+    {
+      title: 'Industry Management Application',
+      user: 'Steven Short',
+      user_image: 'assets/images/avatars/person-5.jpg',
+      user_email: 'steven_short@email.com',
+      company: 'Industries Inc.',
+      date: '6 Jan 2018',
+      status: 'active',
+      status_color: 'success'
+    },
+    {
+      title: 'E-Commerce Website',
+      user: 'Mark Ups',
+      user_image: 'assets/images/avatars/person-6.jpg',
+      user_email: 'mark_ups@email.com',
+      company: 'LTD',
+      date: '12 Nov 2017',
+      status: 'inactive',
+      status_color: 'danger'
+    },
+    {
+      title: 'E-Learning Platform',
+      user: 'Tara Knows',
+      user_image: 'assets/images/avatars/person-9.jpg',
+      user_email: 'tara_knows@email.com',
+      company: 'LTD',
+      date: '6 Sep 2017',
+      status: 'inactive',
+      status_color: 'danger'
+    },
+    {
+      title: 'Workers profile management',
+      user: 'Karen Smith',
+      user_image: 'assets/images/avatars/person-13.jpg',
+      user_email: 'karen_smith@email.com',
+      company: 'Industries Inc.',
+      date: '11 Jan 2017',
+      status: 'active',
+      status_color: 'success'
+    },
+    {
+      title: 'Industry contract',
+      user: 'Steven Short',
+      user_image: 'assets/images/avatars/person-5.jpg',
+      user_email: 'steven_short@email.com',
+      company: 'Industries Inc.',
+      date: '9 Jan 2018',
+      status: 'active',
+      status_color: 'success'
+    }
+  ]
+%}
+
+{% block scripts %}
+<script>
+  $(".check-projects").click(function(){
+    $('.project').not(this).prop('checked', this.checked);
+  });
+</script>
+{% endblock %}

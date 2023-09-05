@@ -1,0 +1,95 @@
+---
+title: Hero
+slug: product
+category: extra
+navbarClass: 'navbar-dark bg-primary'
+pageTitle: 'Product'
+---
+{% extends "./layouts/default.html" %}
+
+{%
+  set reviews = [
+    {
+      user: 'Andrew Robles',
+      user_image: 'assets/images/avatars/person-1.jpg',
+      content: 'This is a great product!',
+      date: '1 day ago'
+    },
+    {
+      user: 'Tara Knows',
+      user_image: 'assets/images/avatars/person-9.jpg',
+      content: 'The perfect choice!',
+      date: '2 days ago'
+    },
+    {
+      user: 'Karen Smith',
+      user_image: 'assets/images/avatars/person-13.jpg',
+      content: "I'm very happy with my purchase.",
+      date: '4 days ago'
+    },
+    {
+      user: 'Mark Ups',
+      user_image: 'assets/images/avatars/person-3.jpg',
+      content: 'This was the best choice.',
+      date: '4 days ago'
+    },
+    {
+      user: 'Tara Knows',
+      user_image: 'assets/images/avatars/person-9.jpg',
+      content: 'The perfect choice!',
+      date: '4 days ago'
+    },
+    {
+      user: 'Andrew Robles',
+      user_image: 'assets/images/avatars/person-1.jpg',
+      content: 'This is a great product!',
+      date: '6 day ago'
+    }
+  ]
+%}
+
+{%
+  set products = [
+    {
+      name: 'iPhone 8 Plus',
+      image: 'assets/images/macbook-pro.jpg',
+      price: '999.00'
+    },
+    {
+      name: 'iPhone 6s Plus',
+      image: 'assets/images/macbook-pro.jpg',
+      price: '600.00'
+    },
+    {
+      name: 'iPhone 7',
+      image: 'assets/images/macbook-pro.jpg',
+      price: '700.00'
+    },
+    {
+      name: 'MacBook Air',
+      image: 'assets/images/macbook-pro.jpg',
+      price: '1400.00'
+    }
+  ]
+%}
+
+{% block scripts %}
+<script src="assets/vendor/owl.carousel.min.js"></script>
+<script>
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    responsive : {
+    0 : {
+      items: 1
+    },
+    480 : {
+      items: 2
+    },
+    768 : {
+      items: 5
+    }
+}
+  });
+</script>
+{% endblock %}

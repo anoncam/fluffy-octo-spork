@@ -1,0 +1,4 @@
+pandas==1.4.3
+beautifulsoup4
+requests
+bs4

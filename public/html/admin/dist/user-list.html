@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hero</title>
+
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
+
+    <!-- Simplebar -->
+    <link type="text/css" href="assets/vendor/simplebar.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-fullbleed data-push data-responsive-width="992px" data-has-scrolling-region>
+
+        <div class="mdk-drawer-layout__content">
+            <!-- header-layout -->
+            <div class="mdk-header-layout js-mdk-header-layout  mdk-header--fixed  mdk-header-layout__content--scrollable">
+                <!-- header -->
+                <div class="mdk-header js-mdk-header bg-primary" data-fixed>
+                    <div class="mdk-header__content">
+
+                        <nav class="navbar navbar-expand-md navbar-dark bg-primary d-flex-none">
+                            <button class="btn btn-link text-white pl-0" type="button" data-toggle="sidebar">
+    <i class="material-icons align-middle md-36">short_text</i>
+  </button>
+                            <div class="page-title m-0">User list</div>
+
+                            <div class="collapse navbar-collapse" id="mainNavbar">
+                                <ul class="navbar-nav ml-auto align-items-center">
+                                    <li class="nav-item nav-link">
+                                        <div class="form-group m-0">
+                                            <div class="input-group input-group--inline">
+                                                <div class="input-group-addon">
+                                                    <i class="material-icons">search</i>
+                                                </div>
+                                                <input type="text" class="form-control" name="search" placeholder="Search app..">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown nav-language d-flex align-items-center">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          EN
+        </a>
+                                        <div class="dropdown-menu dropdown-menu-right ">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <a href="account.html" class="dropdown-item active">
+                <img src="http://flags.fmcdn.net/data/flags/w1160/us.png" style="width: 25px; vertical-align: middle" alt="English"> English
+              </a>
+                                                </li>
+                                                <li>
+                                                    <a href="account.html" class="dropdown-item">
+                <img src="http://flags.fmcdn.net/data/flags/w1160/fr.png" style="width: 25px; vertical-align: middle" alt="French"> French
+              </a>
+                                                </li>
+                                                <li>
+                                                    <a href="account.html" class="dropdown-item">
+                <img src="http://flags.fmcdn.net/data/flags/w1160/de.png" style="width: 25px; vertical-align: middle" alt="English"> German
+              </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown notifications d-flex align-self-center align-items-center" id="navbarNotifications">
+                                        <a href="#" class="nav-link dropdown-toggle notifications--active" data-toggle="dropdown" aria-expanded="false">
+          <i class="material-icons align-middle">notifications</i>
+        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown" id="notificationsDropdown">
+                                            <ul class="nav nav-tabs-notifications" id="notifications-ul" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="true">Notifications</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="alerts-tab" data-toggle="tab" href="#alerts" role="tab" aria-controls="alerts" aria-selected="false">Alerts</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="notifications-tabs">
+                                                <div class="tab-pane fade show active" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">
+                                                            <div class="w-100">
+                                                                <a href="#">john</a> received a new quote</div>
+                                                            <div class="w-100 text-muted">4 secs ago</div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="w-100">
+                                                                <a href="#">karen</a> received a new quote</div>
+                                                            <div class="w-100 text-muted">25 mins ago</div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="w-100">
+                                                                <a href="#">jim</a> received a new quote</div>
+                                                            <div class="w-100 text-muted">7 hrs ago</div>
+                                                        </li>
+                                                        <li class="list-group-item text-right">
+                                                            <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle">arrow_forward</i>
+                  </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" id="alerts" role="tabpanel" aria-labelledby="alerts-tab">
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <i class="material-icons align-middle mr-2 text-warning">
+                      info_outline
+                    </i>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">
+                                                                        <a href="profile.html">john</a> received a new
+                                                                        <a href="#">quote</a>
+                                                                    </div>
+                                                                    <div class="w-100 text-muted">4 secs ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <i class="material-icons align-middle mr-2 text-success">
+                      check_circle
+                    </i>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">
+                                                                        <a href="profile.html">karen</a> completed a
+                                                                        <a href="#">task</a>
+                                                                    </div>
+                                                                    <div class="w-100 text-muted">25 mins ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <i class="material-icons align-middle mr-2 text-danger">
+                      warning
+                    </i>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">
+                                                                        <a href="profile.html">jim</a> removed a
+                                                                        <a href="#">task</a>
+                                                                    </div>
+                                                                    <div class="w-100 text-muted">7 hrs ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item text-right">
+                                                            <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle">arrow_forward</i>
+                  </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <a href="profile.html">
+                      <img src="assets/images/avatars/person-1.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                    </a>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">I started that project we talked...</div>
+                                                                    <div class="w-100 text-muted">4 secs ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <a href="profile.html">
+                      <img src="assets/images/avatars/person-11.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                    </a>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">Can we arrange a meeting?...</div>
+                                                                    <div class="w-100 text-muted">25 mins ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <div class="media align-items-center">
+                                                                <a href="profile.html">
+                      <img src="assets/images/avatars/person-12.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                    </a>
+                                                                <div class="media-body">
+                                                                    <div class="w-100">We need to fix some bugs...</div>
+                                                                    <div class="w-100 text-muted">7 hrs ago</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item text-right">
+                                                            <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle">arrow_forward</i>
+                  </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item nav-divider">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link dropdown-toggle dropdown-clear-caret" data-toggle="sidebar" data-target="#user-drawer">
+          Frontted
+          <img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="img-fluid rounded-circle ml-1" width="35"
+            alt="">
+        </a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- content -->
+                <div class="mdk-header-layout__content top-navbar mdk-header-layout__content--scrollable h-100">
+                    <!-- main content -->
+                    <div class="container-fluid">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group mb-3">
+                                    <div class="input-group input-group--inline">
+                                        <div class="input-group-addon">
+                                            <i class="material-icons">search</i>
+                                        </div>
+                                        <input type="text" class="form-control" name="search" placeholder="Search for user...">
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex align-items-center mb-3">
+                                    <div class="mr-2">Sort by:</div>
+                                    <select class="custom-select mr-2">
+          <option selected>Last active</option>
+          <option value="1">Name</option>
+          <option value="2">Followers</option>
+        </select>
+
+                                    <small class="text-muted">250 Results</small>
+                                </div>
+                                <ul class="list-group mb-3">
+
+                                    <li class="list-group-item">
+                                        <div class="media align-items-center">
+                                            <img src="assets/images/avatars/person-1.jpg" alt="Andrew Robles" width="40" class="rounded-circle mr-2">
+                                            <div class="media-body">
+                                                <div>
+                                                    <a href="profile.html">Andrew Robles</a> active now
+                                                </div>
+                                                <div class="mb-2">
+                                                    1st Avenue, New York
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="social social-facebook mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"/></svg>
+                </a>
+                                                    <a href="#" class="social social-twitter mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg"  clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-instagram mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-dribbble">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></svg>
+                </a>
+                                                </div>
+                                            </div>
+                                            <a href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons align-middle text-muted">more_horiz</i>
+            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-danger">block</i>
+                <span class="align-middle">Block user</span>
+              </a>
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-primary">check</i>
+                <span class="align-middle">Follow</span>
+              </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="media align-items-center">
+                                            <img src="assets/images/avatars/person-9.jpg" alt="Tara Knows" width="40" class="rounded-circle mr-2">
+                                            <div class="media-body">
+                                                <div>
+                                                    <a href="profile.html">Tara Knows</a> active now
+                                                </div>
+                                                <div class="mb-2">
+                                                    Street 9021, Washington DC
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="social social-facebook mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"/></svg>
+                </a>
+                                                    <a href="#" class="social social-twitter mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg"  clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-instagram mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-dribbble">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></svg>
+                </a>
+                                                </div>
+                                            </div>
+                                            <a href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons align-middle text-muted">more_horiz</i>
+            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-danger">block</i>
+                <span class="align-middle">Block user</span>
+              </a>
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-primary">check</i>
+                <span class="align-middle">Follow</span>
+              </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="media align-items-center">
+                                            <img src="assets/images/avatars/person-5.jpg" alt="Mark Ups" width="40" class="rounded-circle mr-2">
+                                            <div class="media-body">
+                                                <div>
+                                                    <a href="profile.html">Mark Ups</a> active now
+                                                </div>
+                                                <div class="mb-2">
+                                                    4th Boulevard, Washington DC
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="social social-facebook mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"/></svg>
+                </a>
+                                                    <a href="#" class="social social-twitter mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg"  clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-instagram mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-dribbble">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></svg>
+                </a>
+                                                </div>
+                                            </div>
+                                            <a href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons align-middle text-muted">more_horiz</i>
+            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-danger">block</i>
+                <span class="align-middle">Block user</span>
+              </a>
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-primary">check</i>
+                <span class="align-middle">Follow</span>
+              </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="media align-items-center">
+                                            <img src="assets/images/avatars/person-3.jpg" alt="Steven Short" width="40" class="rounded-circle mr-2">
+                                            <div class="media-body">
+                                                <div>
+                                                    <a href="profile.html">Steven Short</a> active 8m ago
+                                                </div>
+                                                <div class="mb-2">
+                                                    3rd Avenue, New York
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="social social-facebook mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"/></svg>
+                </a>
+                                                    <a href="#" class="social social-twitter mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg"  clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-instagram mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-dribbble">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></svg>
+                </a>
+                                                </div>
+                                            </div>
+                                            <a href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons align-middle text-muted">more_horiz</i>
+            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-danger">block</i>
+                <span class="align-middle">Block user</span>
+              </a>
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-primary">check</i>
+                <span class="align-middle">Follow</span>
+              </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="media align-items-center">
+                                            <img src="assets/images/avatars/person-8.jpg" alt="Karen Smith" width="40" class="rounded-circle mr-2">
+                                            <div class="media-body">
+                                                <div>
+                                                    <a href="profile.html">Karen Smith</a> active 46m ago
+                                                </div>
+                                                <div class="mb-2">
+                                                    2201 Street, New York
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="social social-facebook mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"/></svg>
+                </a>
+                                                    <a href="#" class="social social-twitter mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg"  clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-instagram mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-dribbble">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></svg>
+                </a>
+                                                </div>
+                                            </div>
+                                            <a href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons align-middle text-muted">more_horiz</i>
+            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-danger">block</i>
+                <span class="align-middle">Block user</span>
+              </a>
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-primary">check</i>
+                <span class="align-middle">Follow</span>
+              </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="media align-items-center">
+                                            <img src="assets/images/avatars/person-10.jpg" alt="John Smith" width="40" class="rounded-circle mr-2">
+                                            <div class="media-body">
+                                                <div>
+                                                    <a href="profile.html">John Smith</a> active 4h ago
+                                                </div>
+                                                <div class="mb-2">
+                                                    Street 7366, San Francisco
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="social social-facebook mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"/></svg>
+                </a>
+                                                    <a href="#" class="social social-twitter mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg"  clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-instagram mr-2">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"/></svg>
+                </a>
+                                                    <a href="#" class="social social-dribbble">
+                  <svg viewBox="0 0 16 16" width="15px" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></svg>
+                </a>
+                                                </div>
+                                            </div>
+                                            <a href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons align-middle text-muted">more_horiz</i>
+            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-danger">block</i>
+                <span class="align-middle">Block user</span>
+              </a>
+                                                <a class="dropdown-item" href="#">
+                <i class="material-icons md-18 align-middle text-primary">check</i>
+                <span class="align-middle">Follow</span>
+              </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <nav aria-label="Users list navigation">
+                                    <ul class="pagination m-0">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="mdk-drawer__inner" data-simplebar data-simplebar-force-enabled="true">
+
+                    <nav class="drawer  drawer--dark">
+                        <div class="drawer-spacer">
+                            <div class="media align-items-center">
+                                <a href="index.html" class="drawer-brand-circle mr-2">H</a>
+                                <div class="media-body">
+                                    <a href="index.html" class="h5 m-0 text-link">Hero Pro - Admin</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- HEADING -->
+                        <div class="py-2 drawer-heading">
+                            Dashboards
+                        </div>
+                        <!-- DASHBOARDS MENU -->
+                        <ul class="drawer-menu" id="dasboardMenu" data-children=".drawer-submenu">
+                            <li class="drawer-menu-item ">
+                                <a href="index.html">
+        <i class="material-icons">poll</i>
+        <span class="drawer-menu-text"> Financial</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="projects.html">
+        <i class="material-icons">dns</i>
+        <span class="drawer-menu-text"> Projects/Tickets</span>
+        <span class="badge badge-pill badge-success ml-1">4</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item ">
+                                <a href="retail.html">
+        <i class="material-icons">store</i>
+        <span class="drawer-menu-text"> E-Commerce</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item ">
+                                <a href="real-estate-grid.html">
+        <i class="material-icons">business</i>
+        <span class="drawer-menu-text"> Real Estate</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item ">
+                                <a href="profile.html">
+        <i class="material-icons">pages</i>
+        <span class="drawer-menu-text"> Social</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item ">
+                                <a href="analytics.html">
+        <i class="material-icons">pie_chart</i>
+        <span class="drawer-menu-text"> Analytics</span>
+      </a>
+                            </li>
+                        </ul>
+
+                        <!-- HEADING -->
+                        <div class="py-2 drawer-heading">
+                            Components
+                        </div>
+
+                        <!-- COMPONENTS MENU -->
+                        <ul class="drawer-menu" id="componentsMenu" data-children=".drawer-submenu">
+                            <li class="drawer-menu-item drawer-submenu">
+                                <a data-toggle="collapse" data-parent="#componentsMenu" href="#" data-target="#uiComponentsMenu" aria-controls="uiComponentsMenu" aria-expanded="false" class="collapsed">
+        <i class="material-icons">library_books</i>
+        <span class="drawer-menu-text"> UI Components</span>
+      </a>
+                                <ul class="collapse " id="uiComponentsMenu">
+                                    <li class="drawer-menu-item "><a href="ui-buttons.html">Buttons</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-colors.html">Colors</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-grid.html">Grid</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-icons.html">Icons</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-typography.html">Typography</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-drag-drop.html">Drag &amp; Drop</a></li>
+                                    <li class="drawer-menu-item "><a href="ui-loaders.html">Loaders</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="drawer-menu-item drawer-submenu">
+                                <a data-toggle="collapse" data-parent="#componentsMenu" href="#" data-target="#formsMenu" aria-controls="formsMenu" aria-expanded="false" class="collapsed">
+        <i class="material-icons">text_format</i>
+        <span class="drawer-menu-text"> Forms</span>
+      </a>
+                                <ul class="collapse " id="formsMenu">
+                                    <li class="drawer-menu-item "><a href="form-controls.html">Form Controls</a></li>
+                                    <li class="drawer-menu-item "><a href="checkboxes-radios.html">Checkboxes &amp; Radios</a></li>
+                                    <li class="drawer-menu-item "><a href="switches-toggles.html">Switches &amp; Toggles</a></li>
+                                    <li class="drawer-menu-item "><a href="form-layout.html">Layout Variations</a></li>
+                                    <li class="drawer-menu-item "><a href="validation.html">Validation</a></li>
+                                    <li class="drawer-menu-item "><a href="custom-forms.html">Custom Forms</a></li>
+                                    <li class="drawer-menu-item "><a href="text-editor.html">Text Editor</a></li>
+                                    <li class="drawer-menu-item "><a href="datepicker.html">Datepicker</a></li>
+                                </ul>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="ui-tables.html">
+        <i class="material-icons">tab</i>
+        <span class="drawer-menu-text"> Tables</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="ui-notifications.html">
+        <i class="material-icons">notifications</i>
+        <span class="drawer-menu-text"> Notifications</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="charts.html">
+        <i class="material-icons">equalizer</i>
+        <span class="drawer-menu-text"> Charts</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="events-calendar.html">
+        <i class="material-icons">event_available</i>
+        <span class="drawer-menu-text"> Calendar</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item  ">
+                                <a href="maps.html">
+        <i class="material-icons">pin_drop</i>
+        <span class="drawer-menu-text"> Maps</span>
+      </a>
+                            </li>
+                        </ul>
+
+
+                        <!-- HEADING -->
+                        <div class="py-2 drawer-heading">
+                            Pages
+                        </div>
+
+                        <!-- PAGES MENU -->
+                        <ul class="drawer-menu" id="pagesMenu" data-children=".drawer-submenu">
+                            <li class="drawer-menu-item">
+                                <a href="user-list.html">
+        <i class="material-icons">list</i>
+        <span class="drawer-menu-text">User List</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="search.html">
+        <i class="material-icons">search</i>
+        <span class="drawer-menu-text">Search</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="gallery.html">
+        <i class="material-icons">grid_on</i>
+        <span class="drawer-menu-text">Gallery</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="account.html">
+        <i class="material-icons">edit</i>
+        <span class="drawer-menu-text">Edit Account</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="login.html">
+        <i class="material-icons">lock</i>
+        <span class="drawer-menu-text">Login</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="signup.html">
+        <i class="material-icons">account_circle</i>
+        <span class="drawer-menu-text">Sign Up</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="forgot-password.html">
+        <i class="material-icons">help</i>
+        <span class="drawer-menu-text">Forgot Password</span>
+      </a>
+                            </li>
+
+                            <li class="drawer-menu-item drawer-submenu">
+                                <a data-toggle="collapse" data-parent="#pagesMenu" href="#" data-target="#errorsMenu" aria-controls="errorsMenu" aria-expanded="false" class="collapsed">
+        <i class="material-icons">error</i>
+        <span class="drawer-menu-text"> Error</span>
+      </a>
+                                <ul class="collapse " id="errorsMenu">
+                                    <li class="drawer-menu-item "><a href="error-403.html">Error 403</a></li>
+                                    <li class="drawer-menu-item "><a href="error-404.html">Error 404</a></li>
+                                    <li class="drawer-menu-item "><a href="error-500.html">Error 500</a></li>
+                                    <li class="drawer-menu-item "><a href="error-503.html">Error 503</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="drawer-menu-item drawer-submenu">
+                                <a data-toggle="collapse" data-parent="#pagesMenu" href="#" data-target="#extrasMenu" aria-controls="extrasMenu" aria-expanded="false" class="collapsed">
+        <i class="material-icons">more</i>
+        <span class="drawer-menu-text"> Extra</span>
+      </a>
+                                <ul class="collapse " id="extrasMenu">
+                                    <li class="drawer-menu-item "><a href="shopping-cart.html">Shopping cart</a></li>
+                                    <li class="drawer-menu-item "><a href="product.html">Product</a></li>
+                                    <li class="drawer-menu-item "><a href="property.html">Property</a></li>
+                                    <li class="drawer-menu-item "><a href="project.html">Project</a></li>
+                                    <li class="drawer-menu-item "><a href="project-tasks.html">Project tasks</a></li>
+                                    <li class="drawer-menu-item "><a href="coming-soon.html">Coming soon</a></li>
+                                    <li class="drawer-menu-item "><a href="maintenance.html">Maintenance</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- // END drawer -->
+
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer" id="user-drawer" data-position="right" data-align="end">
+            <div class="mdk-drawer__content">
+                <div class="mdk-drawer__inner" data-simplebar data-simplebar-force-enabled="true">
+                    <nav class="drawer drawer--light">
+                        <div class="drawer-spacer drawer-spacer-border">
+                            <div class="media align-items-center">
+                                <img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                                <div class="media-body">
+                                    <a href="#" class="h5 m-0">Frontted</a>
+                                    <div>Account Manager</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drawer-spacer bg-body-bg">
+                            <div class="d-flex justify-content-between mb-2">
+                                <p class="h6 text-gray m-0"><i class="material-icons align-middle md-18 text-primary">monetization_on</i> Balance</p>
+                                <span>$21,011</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p class="h6 text-gray m-0"><i class="material-icons align-middle md-18 text-primary">shopping_cart</i> Sales</p>
+                                <span>142</span>
+                            </div>
+                        </div>
+                        <!-- MENU -->
+                        <ul class="drawer-menu" id="userMenu" data-children=".drawer-submenu">
+                            <li class="drawer-menu-item">
+                                <a href="account.html">
+        <i class="material-icons">lock</i>
+        <span class="drawer-menu-text"> Account</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="profile.html">
+        <i class="material-icons">account_circle</i>
+        <span class="drawer-menu-text"> Profile</span>
+      </a>
+                            </li>
+                            <li class="drawer-menu-item">
+                                <a href="login.html">
+        <i class="material-icons">exit_to_app</i>
+        <span class="drawer-menu-text"> Logout</span>
+      </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- // END drawer -->
+
+    </div>
+    <!-- // END drawer-layout -->
+
+
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Simplebar -->
+    <!-- Used for adding a custom scrollbar to the drawer -->
+    <script src="assets/vendor/simplebar.js"></script>
+
+
+    <!-- Vendor -->
+    <script src="assets/vendor/Chart.min.js"></script>
+    <script src="assets/vendor/moment.min.js"></script>
+
+
+    <!-- APP -->
+    <script src="assets/js/color_variables.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+    <script src="assets/vendor/dom-factory.js"></script>
+    <!-- DOM Factory -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+    <!-- MDK -->
+
+
+
+    <script>
+        (function() {
+            'use strict';
+            // Self Initialize DOM Factory Components
+            domFactory.handler.autoInit()
+
+
+            // Connect button(s) to drawer(s)
+            var sidebarToggle = document.querySelectorAll('[data-toggle="sidebar"]')
+
+            sidebarToggle.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    var selector = e.currentTarget.getAttribute('data-target') || '#default-drawer'
+                    var drawer = document.querySelector(selector)
+                    if (drawer) {
+                        if (selector == '#default-drawer') {
+                            $('.container-fluid').toggleClass('container--max');
+                        }
+                        drawer.mdkDrawer.toggle();
+                    }
+                })
+            })
+        })()
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+---
+title: Hero
+slug: index
+category: index
+navbarClass: bg-primary navbar-dark
+pageTitle: Financial
+---
+{% extends "layouts/default.html" %}
+
+{%
+  set top_users = [
+    {
+      name: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      position: 'Senior Full Stack Developer',
+      place: '1st'
+    },
+    {
+      name: 'Steven Short',
+      image: 'assets/images/avatars/person-5.jpg',
+      position: 'Senior Front-End Developer',
+      place: '2nd'
+    },
+    {
+      name: 'Mark Ups',
+      image: 'assets/images/avatars/person-6.jpg',
+      position: 'UI / UX Designer',
+      place: '3rd'
+    },
+    {
+      name: 'Tara Knows',
+      image: 'assets/images/avatars/person-9.jpg',
+      position: 'Senior Back-End Developer',
+      place: '4th'
+    }
+  ]
+%}
+
+{%
+  set top_invoices = [
+    {
+      name: 'Tara Knows',
+      image: 'assets/images/avatars/person-9.jpg',
+      position: 'Sales Manager',
+      revenue: '4865.50'
+    },
+    {
+      name: 'Steven Short',
+      image: 'assets/images/avatars/person-5.jpg',
+      position: 'Sales Assistant Manager',
+      revenue: '3990.90'
+    },
+    {
+      name: 'Mark Ups',
+      image: 'assets/images/avatars/person-6.jpg',
+      position: 'Sales Assistant Manager',
+      revenue: '3675.00'
+    },
+    {
+      name: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      position: 'Sales Representative',
+      revenue: '3100.00'
+    },
+    {
+      name: 'Steven Short',
+      image: 'assets/images/avatars/person-5.jpg',
+      position: 'Sales Representative',
+      revenue: '2875.50'
+    },
+    {
+      name: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      position: 'Sales Representative',
+      revenue: '2380.00'
+    }
+  ]
+%}
+
+{%
+  set top_rankings= [
+    {
+      name: 'Tara Knows',
+      image: 'assets/images/avatars/person-9.jpg',
+      position: 'Senior Back-End Developer',
+      score: '11800'
+    },
+    {
+      name: 'Steven Short',
+      image: 'assets/images/avatars/person-5.jpg',
+      position: 'Senior Full Stack Developer',
+      score: '10020'
+    },
+    {
+      name: 'Mark Ups',
+      image: 'assets/images/avatars/person-6.jpg',
+      position: 'Senior HR Recruiter',
+      score: '9860'
+    },
+    {
+      name: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      position: 'Software Developer',
+      score: '8890'
+    },
+    {
+      name: 'Steven Short',
+      image: 'assets/images/avatars/person-5.jpg',
+      position: 'Junior Software Developer',
+      score: '6100'
+    },
+    {
+      name: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      position: 'Junior Software Developer',
+      score: '2750'
+    }
+  ]
+%}
+
+{%
+  set orders = [
+    {
+      user: 'Tara Knows',
+      position: 'Sales Manager',
+      id: '31982',
+      amount: '8650.99',
+      status: 'pending',
+      status_color: 'warning',
+      date: '23 Feb 2018'
+    },
+    {
+      user: 'Karen Smith',
+      position: 'Sales Representative',
+      id: '11102',
+      amount: '3445.00',
+      status: 'failed',
+      status_color: 'danger',
+      date: '09 Feb 2018'
+    },
+    {
+      user: 'Steven Short',
+      position: 'Sales Manager',
+      id: '11990',
+      amount: '2390.75',
+      status: 'delivered',
+      status_color: 'success',
+      date: '08 Jan 2017'
+    },
+    {
+      user: 'Mark Ups',
+      position: 'CEO / Co-Founder',
+      id: '40915',
+      amount: '19231.50',
+      status: 'delivered',
+      status_color: 'success',
+      date: '18 Dec 2017'
+    },
+    {
+      user: 'Steven Short',
+      position: 'Sales Assistant Manager',
+      id: '40912',
+      amount: '19231.50',
+      status: 'delivered',
+      status_color: 'success',
+      date: '17 Nov 2017'
+    },
+    {
+      user: 'Karen Smith',
+      position: 'Sales Representative',
+      id: '1928',
+      amount: '1100.50',
+      status: 'failed',
+      status_color: 'danger',
+      date: '08 Oct 2017'
+    }
+  ]
+%}
+
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/vendor-bootstrap-datepicker.css" rel="stylesheet">
+{% endblock %}
+
+
+
+{% block scripts %}
+<script src="assets/vendor/morris.min.js"></script>
+<script src="assets/vendor/raphael.min.js"></script>
+<script src="assets/vendor/bootstrap-datepicker.min.js"></script>
+<script src="assets/js/datepicker.js"></script>
+
+<script>
+  $(function() {
+    window.morrisDashboardChart = new Morris.Area({
+      element: 'morris-area-chart',
+      data: [
+      { year: '2017-01', a: 6352.27},
+      { year: '2017-02', a: 4309.98},
+      { year: '2017-03', a: 1465.98},
+      { year: '2017-04', a: 1298.25},
+      { year: '2017-05', a: 3209},
+      { year: '2017-06', a: 2083},
+      { year: '2017-07', a: 1285.23},
+      { year: '2017-08', a: 1289},
+      { year: '2017-09', a: 4430},
+      { year: '2017-10', a: 8921.19}
+      ],
+      xkey: 'year',
+      ykeys: ['a'],
+      labels: ['Earnings'],
+      lineColors: ['#fff'],
+      fillOpacity: '0.2',
+      gridEnabled: true,
+      gridTextColor: '#ffffff',
+      resize: true
+    });
+
+  });
+</script>
+{% endblock %}
