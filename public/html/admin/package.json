@@ -53,13 +53,13 @@
     "bootstrap-datepicker": "^1.7.1",
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",
-    "concurrently": "^3.4.0",
-    "cross-env": "^7.0.3",
+    "concurrently": "^8.2.1",
+    "cross-env": "^4.0.0",
     "dateformat": "^3.0.2",
     "lite-server": "^2.2.0",
     "object.values": "^1.0.4",
     "owl.carousel": "^2.3.4",
-    "surge": "^0.17.7",
+    "surge": "^0.23.1",
     "theme-mix": "0.4"
   }
 }
