@@ -46,7 +46,7 @@
     "raphael": "^2.2.7",
     "select2": "^4.0.4",
     "select2-bootstrap-theme": "0.1.0-beta.10",
-    "simplebar": "2.0.3",
+    "simplebar": "6.2.5",
     "summernote": "^0.8.8"
   },
   "devDependencies": {
